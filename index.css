@@ -1,6 +1,6 @@
 header {
-  color: #077B88;
-  background-color: #E2CCC6;
+  color: black;
+  background-color: lightgray;
   text-align: center;
   font-family: Impact;
   font-size: 40px;
@@ -31,8 +31,8 @@ a:last-child {
 }
 
 footer {
-  color: #077B88;
-  background-color: #E2CCC6;
+  color: black;
+  background-color: lightgray;
   font: Verdana;
   padding: 3px;
   padding-top: 10px;
