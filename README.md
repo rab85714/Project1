@@ -1,0 +1,3 @@
+# Project 0
+
+My goal for this project is to eventually be able to develope it into a platform to show employers my skills. I created 4 different html files, each dedicated to a different aspect of my life. The first is aboutme.html, that one including a photo of me and a short description of myself as well as my goals for the website. The second html file is dedicated to listing my education. The third and fourth are dedicated to my life outside of school - mainly lacrosse and my sorority, as well as a few clubs I am also involved in. Lacrosse is a huge aspect of my life, so that is why I decided to make it its own page. 
