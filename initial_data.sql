@@ -5,7 +5,7 @@ USE restaurant;
 CREATE TABLE 'menuItem' (
   'id' int(11) NOT NULL,
   'name' varchar(255) NOT NULL,
-  'price' double NOT NULL,
+  'price' decimal(10,2) NOT NULL,
   'description' varchar(255),
   'inStock' tinyint(1) NOT NULL,
   PRIMARY KEY('id')
