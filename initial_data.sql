@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS restaurant;
 
 USE restaurant;
 
-CREATE TABLE 'menuItem' (
+CREATE TABLE IF NOT EXISTS 'menuItem' (
   'id' int(11) NOT NULL,
   'name' varchar(255) NOT NULL,
   'price' decimal(10,2) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE 'menuItem' (
   PRIMARY KEY('id')
 );
 
-CREATE TABLE 'user' (
+CREATE TABLE IF NOT EXISTS 'user' (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
