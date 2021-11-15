@@ -8,7 +8,7 @@ CREATE TABLE 'menuItem' (
   'price' double NOT NULL,
   'description' varchar(255)
   'inStock' tinyint(1) NOT NULL,
-  PRIMARY KEY('Id')
+  PRIMARY KEY('id')
 );
 
 CREATE TABLE 'user' (
@@ -19,5 +19,5 @@ CREATE TABLE 'user' (
   `lastName` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `isAdmin` tinyint(1) NOT NULL,
-  PRIMARY KEY (`ID`)
+  PRIMARY KEY (`id`)
 );
