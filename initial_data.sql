@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS restaurant;
 USE restaurant;
 
 CREATE TABLE 'menuItem' (
-  'id' int(11) NOT NULL AUTO_INCREMENT,
+  'id' int(11) NOT NULL,
   'name' varchar(255) NOT NULL,
   'price' double NOT NULL,
   'description' varchar(255)
