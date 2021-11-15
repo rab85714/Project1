@@ -3,8 +3,8 @@ CREATE DATABASE IF NOT EXISTS restaurant;
 USE restaurant;
 
 CREATE TABLE IF NOT EXISTS 'menuItem' (
-'id' int(11) NOT NULL,
 'name' varchar(255) NOT NULL,
+'id' int(11) NOT NULL,
 'price' decimal(10,2) NOT NULL,
 'description' varchar(255),
 'inStock' tinyint(1) NOT NULL,
