@@ -2,7 +2,7 @@
   require('database.php');
   session_start();
 
-  $queryMenu = 'SELECT * FROM menuItem'
+  $queryMenu = 'SELECT * FROM menuItem';
 
   $itemNames = $db->query($queryMenu);
   $itemPrices = $db->query($queryMenu);
