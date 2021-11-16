@@ -39,9 +39,14 @@ CREATE TABLE IF NOT EXISTS orderhistory (
  FOREIGN KEY(itemId) references menuItem(id)
 );
 
-INSERT INTO user VALUES
-(1, 'admin@mail.com', 'password', 'Master', 'Admin', '555-555-5555', 1),
-(2, 'user1@mail.com', 'pwd1', 'Average', 'Joe', '555-666-6666', 0);
+BEGIN
+  IF NOT EXISTS (SELECT * FROM user WHERE id < 3)
+  BEGIN
+    INSERT INTO user VALUES
+    (1, 'admin@mail.com', 'password', 'Master', 'Admin', '555-555-5555', 1),
+    (2, 'user1@mail.com', 'pwd1', 'Average', 'Joe', '555-666-6666', 0);
+  END
+END 
 
 INSERT INTO menuItem VALUES
 (1, 'Pasta', 12.00, 'Angel hair pasta with freshly churned butter and salt', 0)
