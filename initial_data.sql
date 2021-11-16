@@ -22,14 +22,14 @@ CREATE TABLE IF NOT EXISTS user (
   PRIMARY KEY (id)
 );
 
-CREATE TABLE cart (
+CREATE TABLE IF NOT EXISTS cart (
   id int(11) NOT NULL,
   itemId int(11) NOT NULL,
   PRIMARY KEY(id) references user(id),
   FOREIGN KEY(itemId) references menuItem(id)
 );
 
-CREATE TABLE orderhistory (
+CREATE TABLE IF NOT EXISTS orderhistory (
  id int(11) NOT NULL,
  itemId int(11) NOT NULL,
  -- Date of Purchase
