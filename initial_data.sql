@@ -32,7 +32,6 @@ CREATE TABLE IF NOT EXISTS cart (
 CREATE TABLE IF NOT EXISTS orderhistory (
  id int(11) NOT NULL,
  itemId int(11) NOT NULL,
- -- Date of Purchase
  dop varchar(255) NOT NULL,
  PRIMARY KEY(id),
  FOREIGN KEY(id) references user(id),
