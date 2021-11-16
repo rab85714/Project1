@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS user (
 CREATE TABLE cart (
   id int(11) NOT NULL,
   itemId int(11) NOT NULL,
-  PRIMARY KEY(id) REFERENCES user(id),
-  FOREIGN KEY(itemId) REFERENCES menuItem(id)
+  PRIMARY KEY(id) references user(id),
+  FOREIGN KEY(itemId) references menuItem(id)
 );
 
 CREATE TABLE orderhistory (
