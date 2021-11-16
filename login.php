@@ -17,7 +17,7 @@
       <form action='loginProcess.php' method='post'>
         <div id="e4_261"></div>
         <span id="e4_262">Log In</span>
-        <span id="e4_263"><a href="register.php">Register</a></span>
+        <span id="e4_263"><a href="menu.html">Register</a></span>
         <div id="e4_265"></div>
         <div id="e4_266">
           <input type="text" id="email" name="email" required autofocus></div>
@@ -27,11 +27,11 @@
           <div id="e4_271"><input type="submit" value="Login" name = "Login"></div>
         </div>
         <div id="e4_314">
-          <div id="e4_315"><a href="home.php"><span id="e4_316">Cancel</span></a></div>
+          <div id="e4_315"><a href="menu.html"><span id="e4_316">Cancel</span></a></div>
         </div>
         </form>
 
-        <span id="e4_274"><a href="loginPasswordResetPrompt.php">Forgot password?</a></span>
+        <span id="e4_274"><a href="menu.html">Forgot password?</a></span>
 
 
     </div>
