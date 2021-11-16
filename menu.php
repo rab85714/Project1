@@ -4,7 +4,9 @@
 
   $queryMenu = 'SELECT * FROM menuItem'
 
-  $menuItems = $db->query($queryMenu);
+  $itemNames = $db->query($queryMenu);
+  $itemPrices = $db->query($queryMenu);
+  $itemDescriptions = $db->query($queryMenu);
  ?>
 
  <!DOCTYPE html>
@@ -17,7 +19,7 @@
      </head>
 
      <body class="container-fluid">
- 
+
        <header>
          <h1>Our Restaurant</h1>
  	       <nav>
@@ -32,20 +34,20 @@
          <h2 class="entres_title"> Entres </h2>
          <table>
            <tr>
-             <?php foreach ($menuItems as $menuItem): ?>
-               <td><a><?php echo $menuItem['name']?></a></td>
+             <?php foreach ($itemNames as $item): ?>
+               <td><a><?php echo $item['name']?></a></td>
              <?php endforeach; ?>
            </tr>
 
            <tr>
-             <?php foreach ($menuItems as $menuItem): ?>
-               <td><a><?php echo $menuItem['price']?></a></td>
+             <?php foreach ($itemPrices as $item): ?>
+               <td><a><?php echo $item['price']?></a></td>
              <?php endforeach; ?>
            </tr>
 
            <tr>
-             <?php foreach ($menuItems as $menuItem): ?>
-               <td><a><?php echo $menuItem['description']?></a></td>
+             <?php foreach ($itemDescriptions as $item): ?>
+               <td><a><?php echo $item['description']?></a></td>
              <?php endforeach; ?>
            </tr>
        </div>
