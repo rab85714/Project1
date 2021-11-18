@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS orderhistory (
 );
 
 CREATE TABLE IF NOT EXISTS locations (
- id int(11) NOT NULL,
+ id int(11) NOT NULL AUTO_INCREMENT,
  name varchar(255) NOT NULL,
  streetNumber int(11) NOT NULL,
  streetName varchar(255) NOT NULL,
