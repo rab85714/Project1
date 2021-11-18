@@ -1,26 +1,25 @@
 <?php
   include('database.php');
 
-	$email = filter_input(INPUT_POST, 'email');
+  $email = filter_input(INPUT_POST, 'email');
   $password = filter_input(INPUT_POST, 'password');
 
   $query = "SELECT * FROM user";
-  $info = $db->query($query);
+  $users = $db->query($query);
 
-  $boo = FALSE;
+  $isValid = FALSE;
 
-  foreach($info as $user):
-  	if($user['Email'] == $email && $user['Password'] == $password) {
-  		$boo = TRUE;
+  foreach($users as $user):
+  	if($user['email'] == $email && $user['password'] == $password) {
+  		$isValid = TRUE;
   		break;
   	}
   endforeach;
 
-  if ($boo) {
-      session_start();
-  	$_SESSION['Email'] = $email;
+  if ($isValid) {
+    session_start();
+  	$_SESSION['email'] = $email;
   	header("location: menu.php");
-
   } else {
       header("location: login.php");
   }
