@@ -51,8 +51,8 @@ CREATE TABLE IF NOT EXISTS locations (
 );
 
 INSERT INTO locations VALUES
-(1, 'Athens Location', '605', 'Clayton Street', 'Athens', 'GA', '30601'),
-(2, 'Atlanta Location', '2', 'Muffin Man Way', 'Atlanta', 'GA', '30338');
+(1, 'Athens Location', 605, 'Clayton Street', 'Athens', 'GA', 30601),
+(2, 'Atlanta Location', 2, 'Muffin Man Way', 'Atlanta', 'GA', 30338);
 
 INSERT INTO user VALUES
 (1, 'admin@mail.com', 'password', 'Master', 'Admin', '555-555-5555', 1),
