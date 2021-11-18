@@ -21,12 +21,13 @@
      <body class="container-fluid">
 
        <header>
-         <h1>Our Restaurant</h1>
+         <h1>Mario's Bistro</h1>
  	       <nav>
            <a class="link" href = "index.html"> Home </a>
            <a class="link" href = "menu.html"> Menu </a>
            <a class="link" href = "locations.html"> Locations </a>
            <a class="link" href = "other.html"> Other </a>
+           <a href="logout.php"> Logout </a>
          </nav>
        </header>
 
