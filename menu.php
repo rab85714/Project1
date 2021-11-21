@@ -38,9 +38,7 @@
              <?php foreach ($itemNames as $item): ?>
                <td><a><?php echo $item['name']?></a></td>
              <?php endforeach; ?>
-           </tr>
 
-           <tr>
              <?php foreach ($itemPrices as $item): ?>
                <td><a><?php echo $item['price']?></a></td>
              <?php endforeach; ?>
@@ -52,7 +50,6 @@
              <?php endforeach; ?>
            </tr>
        </div>
-
 
        <footer>
          <nav id="socials">
