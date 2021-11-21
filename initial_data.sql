@@ -54,11 +54,11 @@ INSERT INTO locations (name, streetNumber, streetName, city, state, zipCode) VAL
 ('Athens Location', 605, 'Clayton Street', 'Athens', 'GA', 30601),
 ('Atlanta Location', 2, 'Muffin Man Way', 'Atlanta', 'GA', 30338);
 
-INSERT INTO user VALUES
-(1, 'admin@mail.com', 'password', 'Master', 'Admin', '555-555-5555', 1),
-(2, 'user1@mail.com', 'pwd1', 'Average', 'Joe', '555-666-6666', 0);
+INSERT IGNORE INTO user VALUES
+(null, 'admin@mail.com', 'password', 'Master', 'Admin', '555-555-5555', 1),
+(null, 'user1@mail.com', 'pwd1', 'Average', 'Joe', '555-666-6666', 0);
 
 
-INSERT INTO menuItem VALUES
-(1, 'Pasta', 12.00, 'Angel hair pasta with freshly churned butter and salt', 0),
-(2, 'Pizza', 13.00, 'Gluten free dairy free red dye free fun free pizza', 1);
+INSERT IGNORE INTO menuItem VALUES
+(null, 'Pasta', 12.00, 'Angel hair pasta with freshly churned butter and salt', 0),
+(null, 'Pizza', 13.00, 'Gluten free dairy free red dye free fun free pizza', 1);
