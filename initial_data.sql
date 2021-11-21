@@ -55,8 +55,8 @@ INSERT INTO locations (name, streetNumber, streetName, city, state, zipCode) VAL
 ('Atlanta Location', 2, 'Muffin Man Way', 'Atlanta', 'GA', 30338);
 
 INSERT IGNORE INTO user VALUES
-(null, 'admin@mail.com', 'password', 'Master', 'Admin', '555-555-5555', 1),
-(null, 'user1@mail.com', 'pwd1', 'Average', 'Joe', '555-666-6666', 0);
+(1, 'admin@mail.com', 'password', 'Master', 'Admin', '555-555-5555', 1),
+(2, 'user1@mail.com', 'pwd1', 'Average', 'Joe', '555-666-6666', 0);
 
 
 INSERT IGNORE INTO menuItem VALUES
