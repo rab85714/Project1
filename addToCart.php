@@ -2,11 +2,11 @@
   require('./database.php');
   session_start();
 
-  $id = filter_input(INPUT_POST, 'id');
+  $itemId = filter_input(INPUT_POST, 'id');
 
   $email = $_SESSION['email'];
 
-  $queryItemsToAdd = 'SELECT * FROM menuitem WHERE menuitem.id = '$id'';
+  $queryItemsToAdd = 'SELECT * FROM menuitem WHERE menuitem.id = '$itemId'';
   $queryCurrentUserID = 'SELECT 'id' FROM user WHERE user.email = '$email'';
 
   $userID = $db->query($queryCurrentUserID);
