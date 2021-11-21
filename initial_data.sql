@@ -60,5 +60,5 @@ INSERT IGNORE INTO user VALUES
 
 
 INSERT IGNORE INTO menuItem VALUES
-(null, 'Pasta', 12.00, 'Angel hair pasta with freshly churned butter and salt', 0),
-(null, 'Pizza', 13.00, 'Gluten free dairy free red dye free fun free pizza', 1);
+(1, 'Pasta', 12.00, 'Angel hair pasta with freshly churned butter and salt', 0),
+(2, 'Pizza', 13.00, 'Gluten free dairy free red dye free fun free pizza', 1);
