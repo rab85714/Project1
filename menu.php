@@ -8,7 +8,7 @@
   $itemNames = $db->query($queryMenu);
   $itemPrices = $db->query($queryMenu);
   $itemDescriptions = $db->query($queryMenu);
-  $itemButtons = $bd->query($queryMenu);
+  $itemButtons = $db->query($queryMenu);
   $numItems = $db->query($queryItemCount);
  ?>
 
