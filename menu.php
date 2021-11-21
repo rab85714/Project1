@@ -3,10 +3,13 @@
   session_start();
 
   $queryMenu = 'SELECT * FROM menuItem';
+  $queryItemCount = 'SELECT COUNT(name) FROM menuItem';
 
   $itemNames = $db->query($queryMenu);
   $itemPrices = $db->query($queryMenu);
   $itemDescriptions = $db->query($queryMenu);
+  $itemButtons = $bd->query($queryMenu);
+  $numItems = $db->query($queryItemCount);
  ?>
 
  <!DOCTYPE html>
@@ -38,7 +41,9 @@
              <?php foreach ($itemNames as $item): ?>
                <td><a><?php echo $item['name']?></a></td>
              <?php endforeach; ?>
+           </tr>
 
+           <tr>
              <?php foreach ($itemPrices as $item): ?>
                <td><a><?php echo $item['price']?></a></td>
              <?php endforeach; ?>
@@ -47,6 +52,17 @@
            <tr>
              <?php foreach ($itemDescriptions as $item): ?>
                <td><a><?php echo $item['description']?></a></td>
+             <?php endforeach; ?>
+           </tr>
+
+           <tr>
+             <?php foreach($itemButtons as $item): ?>
+                <td>
+                  <form action="addToCart.php" method="post">
+                    <a><input type="hidden" name="id" value="<?php echo $item['id']?>"></a>
+                    <a><input type="submit" value="Add to Cart"></a>
+                  </form>
+                </td>
              <?php endforeach; ?>
            </tr>
        </div>
