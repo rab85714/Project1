@@ -3,7 +3,7 @@
   session_start();
 
   $input = filter_input(INPUT_POST, 'id');
-  $itemID = $input['id'];
+  $itemId = $input['id'];
 
   $email = $_SESSION['email'];
 
