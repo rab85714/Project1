@@ -2,8 +2,7 @@
   require('./database.php');
   session_start();
 
-  $input = filter_input(INPUT_POST, 'id');
-  $itemId = $input['id'];
+  $itemId = filter_input(INPUT_POST, 'id');
 
   $email = $_SESSION['email'];
 
