@@ -7,7 +7,7 @@
 
   $email = $_SESSION['email'];
 
-  $queryItemsToAdd = 'SELECT * FROM menuitem WHERE menuitem.id = '$itemId'';
+  $queryItemsToAdd = 'SELECT * FROM menuitem WHERE id = '$itemId'';
   $queryCurrentUserID = 'SELECT id FROM user WHERE user.email = '$email'';
 
   $userID = $db->query($queryCurrentUserID);
