@@ -8,7 +8,7 @@
   $queryItemsToAdd = 'SELECT * FROM menuitem WHERE id = '$itemId'';
   $userId = 'SELECT id FROM user WHERE user.email = '$email'';
 
-  $query = 'INSERT INTO cart VALUES ('$userId', '$itemId')';
+  $query = 'INSERT INTO cart VALUES (1, 1)';
   $info = $db->query($query);
   header("Location: cart.php");
 ?>
