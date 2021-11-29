@@ -6,11 +6,8 @@
   $email = $_SESSION['email'];
 
   $queryItemsToAdd = 'SELECT * FROM menuitem WHERE id = '$itemId'';
-  $queryCurrentUserID = 'SELECT id FROM user WHERE user.email = '$email'';
+  $userId = 'SELECT id FROM user WHERE user.email = '$email'';
 
-  $userID = $db->query($queryCurrentUserID);
-  $itemsToAdd = $db->query($queryItemsToAdd);
-
-  $queryAlterCart = 'INSERT INTO cart VALUES ('$userID', '$itemsToAdd')';
+  $query = 'INSERT INTO cart VALUES ('$userId', '$itemId')';
   header("Location: cart.php");
 ?>

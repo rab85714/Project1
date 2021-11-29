@@ -44,7 +44,6 @@
           <form action="deleteItemCart.php" method="post">
 
             <tr><th></th><th>Title</th><th>Quantity</th><th>Price</th></tr>
-            <tr> <?php echo $email ?>
             <tr>
                 <?php foreach($cart as $item):?>
 
