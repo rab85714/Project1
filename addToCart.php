@@ -3,8 +3,9 @@
   session_start();
 
   $itemId = filter_input(INPUT_POST, 'id');
-
+  echo $itemId;
   $email = $_SESSION['email'];
+  echo $email;
 
   $queryItemsToAdd = 'SELECT * FROM menuitem WHERE id = '$itemId'';
   $queryCurrentUserID = 'SELECT id FROM user WHERE user.email = '$email'';
