@@ -9,5 +9,6 @@
   $userId = 'SELECT id FROM user WHERE user.email = '$email'';
 
   $query = 'INSERT INTO cart VALUES ('$userId', '$itemId')';
+  $info = $db->query($query);
   header("Location: cart.php");
 ?>
