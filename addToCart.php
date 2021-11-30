@@ -2,12 +2,13 @@
   require('./database.php');
   session_start();
 
-  $query = 'INSERT INTO cart VALUES (1, 1)';
-  $info = mysqli_query($db, $query);
-  $resultCheck = mysqli_num_rows($info);
+  $itemId = filter_input(INPUT_POST, 'id');
+  $email = $_SESSION['email'];
 
-  if ($resultCheck > 0){
-    header("location: cart.php");
-  }
-  header("location: logout.php");
+  $queryItemsToAdd = 'SELECT * FROM menuitem WHERE id = '$itemId'';
+  $userId = 'SELECT id FROM user WHERE user.email = '$email'';
+
+  $query = 'INSERT INTO cart VALUES (1, 1)';
+  $info = $db->query($query);
+  header("Location: cart.php");
 ?>
