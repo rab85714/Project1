@@ -18,15 +18,15 @@
     $userPrep = $db->prepare($userQuery);
     $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
     $userExecute = $userPrep->execute();
-    print $userExecute . "<br>";
+    print "userExecute " . $userExecute . "<br>";
     $userId = $userExecute;
 
     $insertQuery = "INSERT INTO cart (id, itemId) VALUES (':userId', ':itemId')";
     $insert = $db->prepare($insertQuery);
     $insert->bindParam(':userId', $userId, PDO::PARAM_INT);
     $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
-    print $userId . "<br>";
-    print $itemId . "<br>";
+    print "userId " . $userId . "<br>";
+    print "itemId " . $itemId . "<br>";
     $result = $insert->execute();
 
     header('location: cart.php');
