@@ -11,3 +11,14 @@
       header("Location: cart.php");
   }
 ?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+</head>
+<body>
+    <?php echo $itemId ?>
+</body>
+</html>
