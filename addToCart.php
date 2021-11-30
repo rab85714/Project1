@@ -2,15 +2,20 @@
   require('./database.php');
   session_start();
 
-  $itemId = filter_input(INPUT_POST, 'id');
-  $sessionId = $_SESSION['id'];
-  $menuItemIdQuery = "SELECT id FROM menuitem WHERE id = '{$itemId}'";
+  if (isset($_POST['add'])) {
+    $itemId = filter_input(INPUT_POST, 'id');
+    $email = $_SESSION['email'];
+    $userQuery = "SELECT id FROM user WHERE email = :email";
+    $userIdPrep = $db->prepare($userQuery);
+    $userIdPrep->bindParam(':email', $email, PDO::PARAM_STR);
+    $userId = $userIdPrep->execute();
 
-  $queryInsert = "INSERT INTO cart (id, itemId) VALUES (':userId', ':itemId')";
-  $insert->bindParam(':userId', $sessionId, PDO::PARAM_INT);
-  $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
-  $insert = $db->query($queryInsert);
+    $insertQuery = "INSERT INTO cart (id, itemId) VALUES (':userId', ':itemId')";
+    $insert = $db->prepare($insertQuery);
+    $insert->bindParam(':userId', $userId, PDO::PARAM_INT);
+    $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
+    $result = $insert->execute();
 
-  header('location: cart.php');
-
+    header('location: cart.php');
+  }
 ?>
