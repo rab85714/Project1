@@ -8,7 +8,7 @@
     $userQuery = "SELECT * FROM user WHERE email = :email";
     $userPrep = $db->prepare($userQuery);
     $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
-    $userExecute = $userIdPrep->execute();
+    $userExecute = $userPrep->execute();
     $userId = $userExecute['id'];
 
     $insertQuery = "INSERT INTO cart (id, itemId) VALUES (':userId', ':itemId')";
