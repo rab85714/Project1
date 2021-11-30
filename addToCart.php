@@ -5,14 +5,15 @@
   if (isset($_POST['add'])) {
     $itemId = filter_input(INPUT_POST, 'id');
     $email = $_SESSION['email'];
-    $userQuery = "SELECT id FROM user WHERE email = :email";
+    $userQuery = "SELECT * FROM user WHERE email = :email";
     $userIdPrep = $db->prepare($userQuery);
     $userIdPrep->bindParam(':email', $email, PDO::PARAM_STR);
     $userId = $userIdPrep->execute();
 
     $insertQuery = "INSERT INTO cart (id, itemId) VALUES (':userId', ':itemId')";
     $insert = $db->prepare($insertQuery);
-    
+    $insert->bindParam(':userId', $userId['id'], PDO::PARAM_INT);
+    $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
     $result = $insert->execute();
 
     header('location: cart.php');
