@@ -7,7 +7,7 @@
   $user = $db->query($userQuery);
   $menuItemIdQuery = "SELECT id FROM menuitem WHERE id = '{$itemId}'";
 
-  $queryInsert = "INSERT INTO cart VALUES ($user['id'], 1)";
+  $queryInsert = "INSERT INTO cart VALUES ({$user['id'] + 0}, 1)";
   $insert = $db->query($queryInsert);
 
   header('location: cart.php');
