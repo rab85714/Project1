@@ -13,7 +13,7 @@
 <?php
   if (isset($_POST['add'])) {
     $itemIdRaw = filter_input(INPUT_POST, 'itemId');
-    $itemId = $itemIdRaw[0];
+    $itemId = $itemIdRaw[0] * 1;
     $email = $_SESSION['email'];
     $userQuery = "SELECT * FROM user WHERE email = :email";
     $userPrep = $db->prepare($userQuery);
