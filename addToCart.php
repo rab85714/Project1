@@ -4,9 +4,9 @@
 
   $itemId = filter_input(INPUT_POST, 'id');
   $userIdQuery = "SELECT id FROM user WHERE email = '{$_SESSION['email']}'";
-  $userId = $db->query($userIdQuery);
+  
 
-  $queryInsert = "INSERT INTO cart VALUES ('{$userId}', '$itemId')";
+  $queryInsert = "INSERT INTO cart VALUES ('{$userIdQuery}', '$itemId')";
   $insert = $db->query($query);
   header("Location: cart.php");
 ?>
