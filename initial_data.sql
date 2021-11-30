@@ -25,7 +25,6 @@ CREATE TABLE IF NOT EXISTS user (
 CREATE TABLE IF NOT EXISTS cart (
   id int(11) NOT NULL,
   itemId int(11) NOT NULL,
-  PRIMARY KEY(id),
   FOREIGN KEY(id) references user(id),
   FOREIGN KEY(itemId) references menuItem(id)
 );
