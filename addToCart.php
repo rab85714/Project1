@@ -13,6 +13,7 @@
 <?php
   if (isset($_POST['add'])) {
     $itemId = filter_input(INPUT_POST, 'itemId');
+    print $itemId[0] . " " . $itemId[1] . "<br>";
     $email = $_SESSION['email'];
     $userQuery = "SELECT * FROM user WHERE email = :email";
     $userPrep = $db->prepare($userQuery);
