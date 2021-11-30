@@ -12,7 +12,7 @@
 <body>
 <?php
   if (isset($_POST['add'])) {
-    $itemId = filter_input(INPUT_POST, 'id');
+    $itemId = filter_input(INPUT_POST, 'itemId');
     print "itemId " . $itemId . "<br>";
     $email = $_SESSION['email'];
     $userQuery = "SELECT * FROM user WHERE email = :email";
