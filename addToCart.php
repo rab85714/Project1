@@ -13,13 +13,12 @@
 <?php
   if (isset($_POST['add'])) {
     $itemId = filter_input(INPUT_POST, 'id');
+    print "itemId " . $itemId . "<br>";
     $email = $_SESSION['email'];
     $userQuery = "SELECT * FROM user WHERE email = :email";
     $userPrep = $db->prepare($userQuery);
     $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
-    $userExecute = $userPrep->execute();
-    print "userExecute " . $userExecute . "<br>";
-    $userId = $userExecute;
+    $userId = $userPrep->execute();
 
     $insertQuery = "INSERT INTO cart (id, itemId) VALUES (':userId', ':itemId')";
     $insert = $db->prepare($insertQuery);
