@@ -19,6 +19,7 @@
     $userPrep = $db->prepare($userQuery);
     $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
     $userId = $userPrep->execute();
+    print $userId[0] . " " . $userId[1] . "<br>";
 
     $insertQuery = "INSERT INTO cart (id, itemId) VALUES ($userId, $itemId)";
     $insert = $db->prepare($insertQuery);
