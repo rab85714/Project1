@@ -7,7 +7,7 @@
   $resultCheck = mysqli_num_rows($info);
 
   if ($resultCheck > 0){
-    header("Location: cart.php");
+    header("location: cart.php");
   }
-  header("Location: logout.php");
+  header("location: logout.php");
 ?>

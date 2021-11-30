@@ -61,7 +61,7 @@
                 <td>
                   <form action="addToCart.php" method="post">
                     <a><input type="hidden" name="itemId" value="<?php echo $item['id']?>"></a>
-                    <a><input type="button" value="Add to Cart"></a>
+                    <a><input type="button" value="add"></a>
                   </form>
                 </td>
              <?php endforeach; ?>
