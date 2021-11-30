@@ -4,9 +4,10 @@
 
   $itemId = filter_input(INPUT_POST, 'id');
   $userIdQuery = "SELECT id FROM user WHERE email = '{$_SESSION['email']}'";
+  $menuItemIdQuery = "SELECT id FROM menuitem WHERE id = '{$itemId}'";
 
-  $queryInsert = "INSERT INTO cart VALUES (1, '$itemId')";
+  $queryInsert = "INSERT INTO cart VALUES (1, '$menuItemIdQuery')";
   if ($db->query($queryInsert) === TRUE) {
-    header(location:cart.php);
+    header('location: cart.php');
   }
 ?>
