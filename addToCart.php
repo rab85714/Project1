@@ -8,8 +8,8 @@
   $menuItemIdQuery = "SELECT id FROM menuitem WHERE id = '{$itemId}'";
 
   $queryInsert = "INSERT INTO cart (id, itemId) VALUES (':userId', ':itemId')";
-  $queryInsert->bindParam(':userId', $userId);
-  $queryInsert->bindParam(':itemId', $itemId);
+  $insert->bindParam(':userId', $userId, PDO::PARAM_INT);
+  $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
   $insert = $db->query($queryInsert);
 
   header('location: cart.php');
