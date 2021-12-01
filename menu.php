@@ -68,13 +68,12 @@
        </div>
 
        <footer>
-         <nav id="socials">
-           <a style="color: white"> Social Medias: </a>
-           <a class="link" href = "" target="_blank"> LinkedIn </a>
-           <a class="link" href = "" target="_blank"> Facebook </a>
-           <a class="link" href = "" target="_blank"> Instagram </a>
-         </nav>
+       	<nav id="socials">
+       	  <a style="color: white"> Contact Us Here: </a>
+       	  <a class="link" href = "" target="_blank"> Email </a>
+       	  <a class="link" href = "" target="_blank"> Phone Number </a>
+       	</nav>
        </footer>
-
+       
      </body>
  </html>

@@ -73,6 +73,14 @@
     <div class="page-right">
     </div>
   </div>
-</body>
 
+  <footer>
+  	<nav id="socials">
+  	  <a style="color: white"> Contact Us Here: </a>
+  	  <a class="link" href = "" target="_blank"> Email </a>
+  	  <a class="link" href = "" target="_blank"> Phone Number </a>
+  	</nav>
+  </footer>
+
+</body>
 </html>
