@@ -12,7 +12,7 @@
 <body>
 <?php
   if (isset($_POST['remove'])) {
-    $itemIdRaw = filter_input(INPUT_POST, 'itemId');
+    $itemIdRaw = filter_input(INPUT_POST, 'id');
     $itemId = $itemIdRaw[0];
     $email = $_SESSION['email'];
     $userQuery = "SELECT * FROM user WHERE email = :email";
