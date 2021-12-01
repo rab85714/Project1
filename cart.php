@@ -47,7 +47,7 @@
                      <form action="removeFromCart.php" method="post">
                      <td><a><?php echo $item['name']?></a></td>
                      <td><a><?php echo $item['price']?></a></td>
-                     <a><input type="hidden" name="itemId" value="<?php echo $item['id']?>"></a>
+                     <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
                      <td><input type="submit" name = "remove" value="X"></td>
                   </tr>
                   
