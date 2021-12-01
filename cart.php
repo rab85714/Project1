@@ -14,12 +14,13 @@
   $userId = $userPrep->execute();
   print "user id : " . $userId . "<br>";
 
-  $cartQuery = "SELECT itemId FROM cart WHERE id = :userId";
+  $cartQuery = "SELECT * FROM cart WHERE id = :userId";
   $cartPrep = $db->prepare($cartQuery);
   $cartPrep->bindParam(':userId', $userId, PDO::PARAM_INT);
-  $cart = $cartPrep->execute();
+  $cartPrep->execute();
+  $cart = $cartPrep -> fetchAll();
   print "cart A : " . $cart . "<br>";
-  print "cart B : " . $cart[0] . "<br>";
+  print "cart B : " . $cart['itemId'] . "<br>";
 ?>
 
 <!DOCTYPE html>
