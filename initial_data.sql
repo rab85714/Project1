@@ -58,5 +58,11 @@ INSERT IGNORE INTO user VALUES
 (2, 'user1@mail.com', 'pwd1', 'Average', 'Joe', '555-666-6666', 0);
 
 INSERT IGNORE INTO menuItem VALUES
-(1, 'Pasta', 12.00, 'Angel hair pasta with freshly churned butter and salt', 0),
-(2, 'Pizza', 13.00, 'Gluten free dairy free red dye free fun free pizza', 1);
+(1, 'Bread Sticks', 9.99, 'As many as you can eat! Comes with a side of our house red sauce', 1),
+(2, 'Housemade Focaccia Bread', 7.99, 'Gluten free with spinach & smoked gouda sauce', 1),
+(3, 'Small Caesar Salad', 8.99, 'Exactly what you would expect', 1),
+(4, 'Pasta Margherita', 15.99, 'Penne with tomato basil red onion garlic and fresh mozzarella', 1),
+(5, 'Pesto Pasta', 13.99, 'Chefs Favorite!', 1),
+(6, 'Tortelloni & Grilled Chicken Sausage', 18.99, 'Red peppers and spicy mascarpone cream sauce ', 1),
+(7, 'Salted Caramel Budino', 9.99, 'Creme fraiche and maldon sea salt', 1),
+(8, 'Italian Butter Cake', 9.99, 'Whipped lemon creme fraiche and cinnamon crumble on top', 1);
