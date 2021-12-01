@@ -19,6 +19,7 @@
           <a class="link" href = "index.html"> Home</a>
           <a class="link" href = "menu.php"> Menu </a>
           <a class="link" href = "locations.php"> Locations </a>
+          <a href="logout.php"> Logout </a>
         </nav>
       </header>
 
