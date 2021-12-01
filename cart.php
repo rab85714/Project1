@@ -19,7 +19,7 @@
   $cartPrep->bindParam(':userId', $userId, PDO::PARAM_INT);
   $cartPrep->execute();
   $cart = $cartPrep -> fetchAll();
-  print_r "cart: " . $cart . "<br>";
+  print_r ("cart: " . $cart . "<br>");
 ?>
 
 <!DOCTYPE html>
