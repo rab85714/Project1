@@ -25,7 +25,7 @@
           <span>password:</span>
           <input type="password" id="password" name="password" required></div>
         <div>
-          <div><input type="submit" value="Login" name = "Login"></div>
+          <div><input onclick="myFunction()" type="submit" value="Login" name = "Login"></div>
         </div>
         <div>
           <div><a href="menu.php"><span id="e4_316">Cancel</span></a></div>
@@ -54,7 +54,7 @@ function myFunction() {
   if (isNaN(y)) {
     text = "Please enter your password.";
   }
-  
+
   document.getElementById("demo").innerHTML = text;
 
 }
