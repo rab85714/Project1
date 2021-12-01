@@ -7,19 +7,10 @@
     header("location: login.php");
   }
 
-  $email = $_SESSION['email'];
-  $userQuery = "SELECT * FROM user WHERE email = :email";
-  $userPrep = $db->prepare($userQuery);
-  $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
-  $userId = $userPrep->execute();
-  print "user id : " . $userId . "<br>";
+  $queryCart = "SELECT * FROM cart, user, menuitem
+    WHERE user.email = '$email' AND user.id = cart.id AND cart.itemId = menuitem.id";
 
-  $cartQuery = "SELECT itemId FROM cart WHERE id = :userId";
-  $cartPrep = $db->prepare($cartQuery);
-  $cartPrep->bindParam(':userId', $userId, PDO::PARAM_INT);
-  $cartPrep->execute();
-  $cart = $cartPrep -> fetchAll();
-  print_r ("cart: " . $cart . "<br>");
+  $cart = $db->query($queryCart);
 ?>
 
 <!DOCTYPE html>
@@ -52,25 +43,18 @@
   <div class="grid-container">
         <table>
 
-                <?php foreach($cart as $cartItemId):?>
-                    <?php
-                        $menuItemInfoQuery = "SELECT * FROM menuitem WHERE menuitem.id = :cartItemId";
-                        $menuItemInfoPrep = $db->prepare($menuItemInfoQuery);
-                        $menuItemInfoPrep->bindParam(':cartItemId', $cartItemId, PDO::PARAM_INT);
-                        $menuItemInfoPrep->execute();
-                        $menuItemInfo = $menuItemInfoPrep->fetchAll();
-                        print "mii: " . $menuItemInfo . "<br>";
-                    ?>
+           <form action="removeFromCart.php" method="post">
 
-                      <tr>
-                         <form action="removeFromCart.php" method="post">
-                         <td><a><?php echo $menuItemInfo['name']?></a></td>
-                         <td><a><?php echo $menuItemInfo['price']?></a></td>
-                         <a><input type="hidden" name="itemId" value="<?php echo $menuItemInfo['id']?>"></a>
+            <tr><th></th><th>Title</th><th>Quantity</th><th>Price</th></tr>
+            <tr>
+                <?php foreach($cart as $item):?>
 
-                         <td><input type="submit" name = "remove" value="X"></td>
-                      </tr>
-                  
+                  <td><input type="number" placeholder = 1 min = 1 max = 10></td>
+                  <td>$<?php echo $item['price']?></td>
+                  <a><input type="hidden" name="itemId" value="<?php echo $item['id']?>"></a>
+                  <td><input type="submit" name = "remove" value="X"></td>
+                  <br>
+
                 <?php endforeach;?>
 
 
