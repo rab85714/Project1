@@ -15,7 +15,7 @@
 
   $cartQuery = "SELECT itemId FROM cart WHERE cart.id = :userId";
   $cartPrep = $db->prepare($cartQuery);
-  $cartPrep->bindParam(':userId', $useId, PDO::PARAM_INT);
+  $cartPrep->bindParam(':userId', $userId, PDO::PARAM_INT);
   $cart = $cartPrep->execute();
   print "cart A : " . $cart . "<br>";
   print "cart B : " . $cart[0] . "<br>";
