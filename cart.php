@@ -41,7 +41,7 @@
 
   <div class="grid-container">
         <table>
-          <form action="deleteItemCart.php" method="post">
+          <form action="removeFromCart.php" method="post">
 
             <tr><th></th><th>Title</th><th>Quantity</th><th>Price</th></tr>
             <tr>
@@ -49,7 +49,8 @@
 
                   <td><input type="number" placeholder = 1 min = 1 max = 10></td>
                   <td>$<?php echo $item['price']?></td>
-                  <td><input type="submit" name = "delete_item" value="X"></td>
+                  <a><input type="hidden" name="itemId" value="<?php echo $item['id']?>"></a>
+                  <td><input type="submit" name = "remove" value="X"></td>
                 <?php endforeach;?>
 
 
