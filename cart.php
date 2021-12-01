@@ -20,7 +20,7 @@
   $cartPrep->execute();
   $cart = $cartPrep -> fetchAll();
   print "cart A : " . $cart . "<br>";
-  print "cart B : " . $cart[0,0] . "<br>";
+  print "cart B : " . $cart[0] . "<br>";
 ?>
 
 <!DOCTYPE html>
@@ -53,8 +53,9 @@
   <div class="grid-container">
         <table>
 
-                <?php foreach($cart as $cartItemId):?>
+                <?php foreach($cart as $cartItem):?>
                     <?php
+                        $cartItemId = $cartItem['itemId'];
                         $menuItemInfoQuery = "SELECT * FROM menuitem WHERE menuitem.id = :cartItemId";
                         $menuItemInfoPrep = $db->prepare($menuItemInfoQuery);
                         $menuItemInfoPrep->bindParam(':cartItemId', $cartItemId, PDO::PARAM_INT);
