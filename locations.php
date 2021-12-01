@@ -1,3 +1,8 @@
+<?php
+  require('database.php');
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +18,7 @@
         <nav>
           <a class="link" href = "index.html"> Home</a>
           <a class="link" href = "menu.php"> Menu </a>
-
+          <a class="link" href = "locations.php"> Locations </a>
         </nav>
       </header>
 

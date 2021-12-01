@@ -28,7 +28,7 @@
  	       <nav>
            <a class="link" href = "index.html"> Home </a>
            <a class="link" href = "menu.php"> Menu </a>
-           <a class="link" href = "locations.html"> Locations </a>
+           <a class="link" href = "locations.php"> Locations </a>
            <a class="link" href = "cart.php"> My Cart </a>
            <a href="logout.php"> Logout </a>
          </nav>
