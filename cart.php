@@ -19,25 +19,19 @@
 <head>
   <meta charset="utf-8">
   <title>My Cart</title>
-  <style>
-    .header {
-      font-family: 'Caveat';
-      font-size: 24px;
-    }
-
-    .options {
-      font-family: 'Ovo';
-      font-size: 22px;
-    }
-
-    .info {
-      font-family: 'Ovo';
-      font-size: 18px;
-    }
-  </style>
 </head>
 
 <body>
+  <header>
+    <h1>Mario's Bistro</h1>
+    <nav>
+      <a class="link" href = "index.html"> Home </a>
+      <a class="link" href = "menu.php"> Menu </a>
+      <a class="link" href = "locations.php"> Locations </a>
+      <a class="link" href = "cart.php"> My Cart </a>
+      <a href="logout.php"> Logout </a>
+    </nav>
+  </header>
 
   <div class="grid-container">
         <table>
