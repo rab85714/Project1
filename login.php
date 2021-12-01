@@ -45,14 +45,18 @@ function myFunction() {
   let x = document.getElementById("email").value;
   // If x is Not a Number or less than one or greater than 10
   let text;
-  if (isNaN(x)) {
+  if (x=="") {
     text = "Please enter your email.";
   }
 
   let y = document.getElementById("password").value;
 
-  if (isNaN(y)) {
+  if (y=="") {
     text = "Please enter your password.";
+  }
+
+  if(x=="" & y=="") {
+    text = "Please enter you email and password.";
   }
 
   document.getElementById("demo").innerHTML = text;
