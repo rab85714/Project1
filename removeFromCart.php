@@ -12,7 +12,8 @@
 <body>
 <?php
   if (isset($_POST['remove'])) {
-    print "button click success";
+    $itemIdRaw = filter_input(INPUT_POST, 'itemId');
+    print $itemIdRaw;
   }
 ?>
 </body>
