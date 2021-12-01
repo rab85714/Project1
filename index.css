@@ -1,6 +1,7 @@
 header {
   color: black;
-  background-color: blue;
+  background-image: url('flag.jpeg');
+  background-size: cover;
   text-align: center;
   font-family: Impact;
   font-size: 40px;

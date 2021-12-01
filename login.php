@@ -16,13 +16,14 @@
     <div id="e4_307">
       <form action='loginProcess.php' method='post'>
         <div id="e4_261"></div>
-        <span id="e4_262">Log In</span>
-        <span id="e4_263"><a href="menu.php">Register</a></span>
+        <h1>Log In</h1>
         <div id="e4_265"></div>
         <div id="e4_266">
-          <input type="text" id="email" name="email" required autofocus></div>
           <span id="e4_267">email:</span>
-        <div id="e4_269"><input type="password" id="password" name="password" required></div><span id="e4_270">password:</span>
+          <input type="text" id="email" name="email" required autofocus></div>
+        <div id="e4_269">
+          <span id="e4_270">password:</span>
+          <input type="password" id="password" name="password" required></div>
         <div id="e4_273">
           <div id="e4_271"><input type="submit" value="Login" name = "Login"></div>
         </div>
