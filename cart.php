@@ -17,8 +17,8 @@
   $cartPrep = $db->prepare($cartQuery);
   $cartPrep->bindParam(':userId', $useId, PDO::PARAM_INT);
   $cart = $cartPrep->execute();
-  print "$cart : " . $cart . "<br>";
-  print "$cart : " . $cart[0] . "<br>";
+  print "cart : " . $cart . "<br>";
+  print "cart : " . $cart[0] . "<br>";
 ?>
 
 <!DOCTYPE html>
