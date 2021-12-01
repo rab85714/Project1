@@ -58,7 +58,9 @@
                         $menuItemInfoQuery = "SELECT * FROM menuitem WHERE menuitem.id = :cartItemId";
                         $menuItemInfoPrep = $db->prepare($menuItemInfoQuery);
                         $menuItemInfoPrep->bindParam(':cartItemId', $cartItemId, PDO::PARAM_INT);
-                        $menuItemInfo = $menuItemInfoPrep->execute();
+                        $menuItemInfoPrep->execute();
+                        $menuItemInfo = $menuItemInfoPrep->fetchAll();
+                        print "mii: " . $menuItemInfo . "<br>";
                     ?>
 
                       <tr>
