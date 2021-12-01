@@ -51,7 +51,7 @@
   <div class="grid-container">
         <table>
 
-                <?php foreach($cart as $cartItem):?>
+                <?php foreach($cart as $cartItemId):?>
                     <?php
                         $menuItemInfoQuery = "SELECT * FROM menuitem WHERE menuitem.id = :cartItemId";
                         $menuItemInfoPrep = $db->prepare($menuItemInfoQuery);
