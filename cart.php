@@ -20,7 +20,7 @@
   $cartPrep->execute();
   $cart = $cartPrep -> fetchAll();
   print "cart A : " . $cart . "<br>";
-  print "cart B : " . $cart['itemId'] . "<br>";
+  print "cart B : " . $cart[0] . "<br>";
 ?>
 
 <!DOCTYPE html>
