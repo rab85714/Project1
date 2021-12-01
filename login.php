@@ -12,30 +12,57 @@
   </style>
 </head>
 <body>
-  <div id="e4_242">
-    <div id="e4_307">
+  <div>
+    <div>
       <form action='loginProcess.php' method='post'>
-        <div id="e4_261"></div>
+        <div></div>
         <h1>Log In</h1>
-        <div id="e4_265"></div>
-        <div id="e4_266">
-          <span id="e4_267">email:</span>
+        <div></div>
+        <div>
+          <span>email:</span>
           <input type="text" id="email" name="email" required autofocus></div>
-        <div id="e4_269">
-          <span id="e4_270">password:</span>
+        <div>
+          <span>password:</span>
           <input type="password" id="password" name="password" required></div>
-        <div id="e4_273">
-          <div id="e4_271"><input type="submit" value="Login" name = "Login"></div>
+        <div>
+          <div><input onclick="myFunction()" type="submit" value="Login" name = "Login"></div>
         </div>
-        <div id="e4_314">
-          <div id="e4_315"><a href="menu.php"><span id="e4_316">Cancel</span></a></div>
+        <div>
+          <div><a href="menu.php"><span id="e4_316">Cancel</span></a></div>
         </div>
         </form>
 
-        <span id="e4_274"><a href="menu.php">Forgot password?</a></span>
+        <span><a href="menu.php">Forgot password?</a></span>
+        <p id=demo></p>
 
 
     </div>
   </div>
+
+<script>
+function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("email").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (x=="") {
+    text = "Please enter your email.";
+  }
+
+  let y = document.getElementById("password").value;
+
+  if (y=="") {
+    text = "Please enter your password.";
+  }
+
+  if(x=="" & y=="") {
+    text = "Please enter you email and password.";
+  }
+
+  document.getElementById("demo").innerHTML = text;
+
+}
+</script>
+
 </body>
 </html>
