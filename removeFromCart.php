@@ -20,7 +20,7 @@
     $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
     $userId = $userPrep->execute();
 
-    print "item id " . $itemId;
+    print "item id " . $itemId . "<br>";
     print "user Id " . $userId;
   }
 ?>

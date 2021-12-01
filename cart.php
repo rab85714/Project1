@@ -51,6 +51,8 @@
                   <td>$<?php echo $item['price']?></td>
                   <a><input type="hidden" name="itemId" value="<?php echo $item['id']?>"></a>
                   <td><input type="submit" name = "remove" value="X"></td>
+                  <br>
+                  
                 <?php endforeach;?>
 
 
