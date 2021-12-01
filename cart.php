@@ -13,7 +13,7 @@
   $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
   $userId = $userPrep->execute();
 
-  $cartQuery = "SELECT * FROM cart WHERE cart.id = :userId";
+  $cartQuery = "SELECT itemId FROM cart WHERE cart.id = :userId";
   $cartPrep = $db->prepare($cartQuery);
   $cartPrep->bindParam(':userId', $useId, PDO::PARAM_INT);
   $cart = $cartPrep->execute();
