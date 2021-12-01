@@ -19,6 +19,8 @@
 <head>
   <meta charset="utf-8">
   <title>My Cart</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <style>
     .header {
       font-family: 'Caveat';
@@ -36,9 +38,17 @@
     }
   </style>
 </head>
-
+<header>
+<h1>Mario's Bistro</h1>
+  <nav>
+    <a class="link" href = "index.html"> Home </a>
+    <a class="link" href = "menu.php"> Menu </a>
+    <a class="link" href = "locations.php"> Locations </a>
+    <a class="link" href = "cart.php"> My Cart </a>
+    <a href="logout.php"> Logout </a>
+  </nav>
+</header>
 <body>
-
   <div class="grid-container">
         <table>
           <form action="deleteItemCart.php" method="post">
