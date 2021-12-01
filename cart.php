@@ -14,7 +14,7 @@
   $userId = $userPrep->execute();
   print "user id : " . $userId . "<br>";
 
-  $cartQuery = "SELECT * FROM cart WHERE id = :userId";
+  $cartQuery = "SELECT itemId FROM cart WHERE id = :userId";
   $cartPrep = $db->prepare($cartQuery);
   $cartPrep->bindParam(':userId', $userId, PDO::PARAM_INT);
   $cartPrep->execute();
@@ -53,9 +53,8 @@
   <div class="grid-container">
         <table>
 
-                <?php foreach($cart as $cartItem):?>
+                <?php foreach($cart as $cartItemId):?>
                     <?php
-                        $cartItemId = $cartItem['itemId'];
                         $menuItemInfoQuery = "SELECT * FROM menuitem WHERE menuitem.id = :cartItemId";
                         $menuItemInfoPrep = $db->prepare($menuItemInfoQuery);
                         $menuItemInfoPrep->bindParam(':cartItemId', $cartItemId, PDO::PARAM_INT);
