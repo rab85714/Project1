@@ -11,7 +11,7 @@
       text-align: center;
     }
     form h1 {
-      margin-top: 10000px;
+      margin-top: 1000px;
     }
 
   </style>
