@@ -68,7 +68,7 @@
             <td>
                 <form action="updateQuantity.php" method="post">
                     <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
-                    <a><input type="hidden" name="quantity" value="<?php echo $item['itemId']?>"></a>
+                    <a><input type="hidden" name="quantity" value="<?php echo $item['quantity']?>"></a>
                     <a><input type="submit" name="update" value="Update"></a>
                 </form>
             </td>

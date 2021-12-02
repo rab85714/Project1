@@ -14,7 +14,6 @@
     if (isset($_POST['update'])) {
         $itemIdRaw = filter_input(INPUT_POST, 'itemId');
         $itemId = $itemIdRaw[0];
-        $test = $itemIdRaw[1];
         $itemQuantityRaw = filter_input(INPUT_POST, 'quantity');
         $itemQuantity = $itemQuantityRaw[0];
         $email = $_SESSION['email'];
@@ -26,7 +25,6 @@
         print "user id: " . $userId . "<br>";
         print "item id: " . $itemId . "<br>";
         print "quantity: " . $itemQuantity . "<br>";
-        print "test: " . $test . "<br>";
     }
 ?>
 </body>
