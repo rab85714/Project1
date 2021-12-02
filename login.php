@@ -47,29 +47,21 @@ function myFunction() {
 
   // get value of the email input
   let x = document.getElementById("email").value;
+  let y = document.getElementById("password").value;
+  var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
+
   //if email is blank, send this error
   if (x=="") {
     alert("Please enter your email.");
-  }
-
-  // get value of password input
-  let y = document.getElementById("password").value;
-
-  // if password is blank, send this error
-  if (y=="") {
+  } else if (y=="") {
     alert("Please enter your password.");
-  }
-
-  if(x=="" & y=="") {
+  } else if (x=="" & y=="") {
     alert("Please enter you email and password.");
-  }
-
-  // if email is invalid email format, send this error
-  var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
-  if (!(x.match(mailformat)) && x!="") {
+  } else if (!(x.match(mailformat)) && x!="") {
     alert("Please enter a valid email address.");
+  } else {
+    
   }
-
 
 }
 </script>
