@@ -11,7 +11,7 @@
       text-align: center;
     }
     form h1 {
-      margin-top: 10px;
+      margin-top: 50px;
     }
 
   </style>
@@ -70,7 +70,7 @@ function myFunction() {
   }
 
   // if email is invalid email format, send this error
-  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
   if (!(x.test(mailformat)) {
     text = "Please enter a valid email address.";
   }
