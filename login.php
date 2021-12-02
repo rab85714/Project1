@@ -28,14 +28,9 @@
         <div>
           <div><input onclick="myFunction()" type="submit" value="Login" name = "Login"></div>
         </div>
-        <div>
-          <div><a href="menu.php"><span id="e4_316">Cancel</span></a></div>
-        </div>
         </form>
 
-        <span><a href="menu.php">Forgot password?</a></span>
         <p id=demo></p>
-
 
     </div>
   </div>
