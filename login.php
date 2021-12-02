@@ -59,7 +59,7 @@ function myFunction() {
     text = "Please enter you email and password.";
   }
 
-  if (value) {
+  if (!value) {
     text = "";
   }
   document.getElementById("demo").innerHTML = text;
