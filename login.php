@@ -5,6 +5,7 @@
   <title>Mario's Bistro Login</title>
   <style>
     body {
+      margin-top: 100px;
       background: #E5E5E5;
       margin: 0;
       padding: 0;
