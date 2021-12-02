@@ -7,8 +7,8 @@
     header("location: login.php");
   }
 
-// this query contains the following variables: id, itemId, name, and price
-  $queryCart = "SELECT user.id, cart.itemId, menuitem.name, menuitem.price FROM cart, user, menuitem
+// this query contains the following variables: id, itemId, quantity, name, and price
+  $queryCart = "SELECT user.id, cart.itemId, cart.quantity, menuitem.name, menuitem.price FROM cart, user, menuitem
                     WHERE user.email = '$email' AND user.id = cart.id AND cart.itemId = menuitem.id";
 
   $cart = $db->query($queryCart);
@@ -64,6 +64,7 @@
       <tr class="item_row">
             <td><?php $total = $total + $item['price']; ?></td>
             <td> <?php echo $item['name']; ?></td>
+            <td> <?php echo $item['quantity']; ?> </td>
             <td> <?php echo $item['price']; ?></td>
             <td>
                 <form action="removeFromCart.php" method="post">
