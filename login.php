@@ -10,6 +10,9 @@
       padding: 0;
       text-align: center;
     }
+    form h1 {
+      margin-top: 10000px;
+    }
 
   </style>
 </head>
@@ -17,7 +20,6 @@
   <div>
     <div>
       <form action='loginProcess.php' method='post'>
-        <div></div>
         <h1>Welcome to Mario's Bistro!</h1>
         <h3>Log In</h3>
 
