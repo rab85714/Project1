@@ -70,8 +70,8 @@ function myFunction() {
   }
 
   // if email is invalid email format, send this error
-  var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
-  if (!(x.match(mailformat))) {
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (!(x.test(mailformat)) {
     text = "Please enter a valid email address.";
   }
 
