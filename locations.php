@@ -29,7 +29,7 @@
             $phpPage = "logout.php";
           }
            ?>
-          <a class="link" href=<?php echo $phpPage ?>>  <?php echo $isLoggedIn ?></a>
+          <a class="link" href=<?php echo $phpPage ?>>  <?php echo $isLoggedIn ?> </a>
         </nav>
       </header>
 
