@@ -17,6 +17,7 @@
         $itemQuantityRaw = filter_input(INPUT_POST, 'quantity');
         $itemQuantity = $itemQuantityRaw[0];
         $email = $_SESSION['email'];
+//todo quantity is not correct. 
         $userQuery = "SELECT * FROM user WHERE email = :email";
         $userPrep = $db->prepare($userQuery);
         $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
