@@ -64,7 +64,7 @@
       <tr class="item_row">
             <td><?php $total = $total + $item['price']; ?></td>
             <td> <?php echo $item['name']; ?></td>
-            <td><input type="number" placeholder = 1 min = 1 max = 10></td>
+            <td> <?php echo $item['quantity']; ?> </td>
             <td> <?php echo $item['price']; ?></td>
             <td>
                 <form action="removeFromCart.php" method="post">
