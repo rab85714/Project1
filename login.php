@@ -47,7 +47,7 @@ function myFunction() {
 
   // set a text variable to be loaded into the page
   let text;
-  
+
   // get value of the email input
   let x = document.getElementById("email").value;
   //if email is blank, send this error
@@ -71,7 +71,7 @@ function myFunction() {
   // if email is invalid email format, send this error
   var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
   if (!(x.match(mailformat)) && x!="") {
-    text = "Please enter a valid email address.";
+    alert("Please enter a valid email address.");
   }
 
   // if text hasn't been assigned an error, leave it blank because no error!
