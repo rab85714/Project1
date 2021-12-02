@@ -21,10 +21,6 @@
     $userId = $userPrep->execute();
 
     $numAlreadyInCartQuery = "SELECT * FROM cart WHERE cart.id = $userId AND cart.itemId = $itemId";
-    /* $numAlreadyInCart = $db->prepare($numAlreadyInCartQuery);
-    $numAlreadyInCart->bindParam(':itemId', $itemId, PDO::PARAM_INT);
-    $numAlreadyInCart->bindParam(':userId', $userId, PDO::PARAM_INT);
-    $temp = $numAlreadyInCart->execute(); */
     $temp =$db->query($numAlreadyInCartQuery);
     $count = $temp->rowCount();
     print "count " . $count . "<br>";
@@ -42,17 +38,6 @@
         $increaseQuantity->bindParam(':itemId', $itemId, PDO::PARAM_INT);
         $result = $increaseQuantity->execute();
     }
-
-/*     if ($numAlreadyInCart == 0){
-        $insertQuery = "INSERT INTO cart (id, itemId, quantity) VALUES (:userId, :itemId, 1)";
-    } else {
-        $insertQuery = "UPDATE cart SET quantity = quantity + 1 WHERE cart.id = $userId AND cart.itemId = $itemId";
-    }
-
-    $insert = $db->prepare($insertQuery);
-    $insert->bindParam(':userId', $userId, PDO::PARAM_INT);
-    $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
-    $result = $insert->execute(); */
 
     header('location: cart.php');
   }
