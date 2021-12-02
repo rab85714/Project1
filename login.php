@@ -47,8 +47,7 @@ function myFunction() {
 
   // set a text variable to be loaded into the page
   let text;
-  let thismessage = "going into function";
-  console.log(thismessage);
+  
   // get value of the email input
   let x = document.getElementById("email").value;
   //if email is blank, send this error
