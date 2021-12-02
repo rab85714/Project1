@@ -49,12 +49,6 @@ function myFunction() {
     text = "Please enter your email.";
   }
 
-  // if email is invalid email format, send this error
-  var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
-  if (!(x.match(mailformat))) {
-    text = "Please enter a valid email";
-  }
-
   // get value of password input
   let y = document.getElementById("password").value;
 
@@ -66,6 +60,12 @@ function myFunction() {
 
   if(x=="" & y=="") {
     text = "Please enter you email and password.";
+  }
+
+  // if email is invalid email format, send this error
+  var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
+  if (!(x.match(mailformat))) {
+    text = "Please enter a valid email";
   }
 
   // if text hasn't been assigned an error, leave it blank because no error!
