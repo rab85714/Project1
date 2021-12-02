@@ -45,15 +45,11 @@
 <script>
 function myFunction() {
 
-  // set a text variable to be loaded into the page
-  let text;
-
   // get value of the email input
   let x = document.getElementById("email").value;
   //if email is blank, send this error
   if (x=="") {
-    text = "Please enter your email.";
-    console.log(text);
+    alert("Please enter your email.");
   }
 
   // get value of password input
@@ -61,11 +57,11 @@ function myFunction() {
 
   // if password is blank, send this error
   if (y=="") {
-    text = "Please enter your password.";
+    alert("Please enter your password.");
   }
 
   if(x=="" & y=="") {
-    text = "Please enter you email and password.";
+    alert("Please enter you email and password.";
   }
 
   // if email is invalid email format, send this error
@@ -74,12 +70,6 @@ function myFunction() {
     alert("Please enter a valid email address.");
   }
 
-  // if text hasn't been assigned an error, leave it blank because no error!
-  if(!text) {
-    text ="";
-  }
-
-  document.getElementById("demo").innerHTML = text;
 
 }
 </script>
