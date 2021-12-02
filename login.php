@@ -54,7 +54,7 @@ function myFunction() {
   //if email is blank, send this error
   if (x=="") {
     text = "Please enter your email.";
-    console.log("realizes email is blank");
+    console.log(text);
   }
 
   // get value of password input
