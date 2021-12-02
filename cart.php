@@ -65,7 +65,12 @@
             <td><?php $total = $total + $item['price']; ?></td>
             <td> <?php echo $item['name']; ?></td>
             <td><input type="number" placeholder = "<?php echo $item['quantity'] ?>" min = 1 max = 10></td>
-            <td> <?php echo $item['quantity']; ?> </td>
+            <td>
+                <form action="updateQuantity.php" method="post">
+                    <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
+                    <a><input type="submit" name="update" value="Update"></a>
+                </form>
+            </td>
             <td> <?php echo $item['price']; ?></td>
             <td>
                 <form action="removeFromCart.php" method="post">
