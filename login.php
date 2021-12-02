@@ -16,17 +16,20 @@
     <div>
       <form action='loginProcess.php' method='post'>
         <div></div>
-        <h1>Welcome!</h1>
+        <h1>Welcome to Mario's Bistro!</h1>
         <h3>Log In</h3>
 
         <div>
           <span>email:</span>
           <input type="text" id="email" name="email" required autofocus></div>
+          <br>
         <div>
           <span>password:</span>
           <input type="password" id="password" name="password" required></div>
+          <br>
         <div>
           <div><input onclick="myFunction()" type="submit" value="Login" name = "Login"></div>
+          <br>
         </div>
         </form>
 
