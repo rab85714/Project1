@@ -24,8 +24,6 @@
     $insert = $db->prepare($insertQuery);
     $insert->bindParam(':userId', $userId, PDO::PARAM_INT);
     $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
-    print "userId " . $userId . "<br>";
-    print "itemId " . $itemId . "<br>";
     $result = $insert->execute();
 
     header('location: cart.php');

@@ -21,8 +21,13 @@
     $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
     $userId = $userPrep->execute();
 
-    print "item id " . $itemId . "<br>";
-    print "user Id " . $userId;
+    $insertQuery = "DELETE FROM cart WHERE cart.id = :userId AND cart.itemId = :itemId";
+    $insert = $db->prepare($insertQuery);
+    $insert->bindParam(':userId', $userId, PDO::PARAM_INT);
+    $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
+    $result = $insert->execute();
+
+    header('location: cart.php');
   }
 ?>
 </body>
