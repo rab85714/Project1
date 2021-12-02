@@ -33,6 +33,7 @@
         $result = $insert->execute();
     } else {
         $increaseQuantityQuery = "UPDATE cart SET quantity = quantity + 1 WHERE cart.id = $userId AND cart.itemId = $itemId";
+        print "item if: " . $itemId;
         $increaseQuantity = $db->prepare($increaseQuantityQuery);
         $increaseQuantity->bindParam(':userId', $userId, PDO::PARAM_INT);
         $increaseQuantity->bindParam(':itemId', $itemId, PDO::PARAM_INT);
