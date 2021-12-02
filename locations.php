@@ -20,7 +20,16 @@
           <a class="link" href = "menu.php"> Menu </a>
           <a class="link" href = "locations.php"> Locations </a>
           <a class="link" href = "cart.php"> My Cart </a>
-          <a class="link" href="logout.php"> Logout </a>
+          <?php
+          $email = $_SESSION['email'];
+          $isLoggedIn = "Login";
+          $phpPage = "login.php";
+          if (isset($email)) {
+            $isLoggedIn = "Logout";
+            $phpPage = "logout.php";
+          }
+           ?>
+          <a class="link" href=<?php echo $phpPage ?>>  <?php echo $isLoggedIn ?> </a>
         </nav>
       </header>
 
