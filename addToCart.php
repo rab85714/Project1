@@ -52,7 +52,7 @@
     $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
     $result = $insert->execute(); */
 
-    header('location: cart.php');
+    //header('location: cart.php');
   }
 ?>
 </body>
