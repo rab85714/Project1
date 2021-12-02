@@ -20,9 +20,10 @@
     $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
     $userId = $userPrep->execute();
 
-    $numAlreadyInCartQuery = "SELECT * FROM cart WHERE cart.itemId = :itemId";
+    $numAlreadyInCartQuery = "SELECT * FROM cart WHERE cart.id = :userId AND cart.itemId = :itemId";
     $numAlreadyInCart = $db->prepare($numAlreadyInCartQuery);
     $numAlreadyInCart->bindParam(':itemId', $itemId, PDO::PARAM_INT);
+    $numAlreadyInCart->bindParam(':userId', $userId, PDO::PARAM_INT);
     $count = $numAlreadyInCart->execute();
     print "count " . $count . "<br>";
     if ($count == 0){
@@ -32,8 +33,8 @@
         $insert->bindParam(':itemId', $itemId, PDO::PARAM_INT);
         $result = $insert->execute();
     } else {
-        $increaseQuantityQuery = "UPDATE cart SET quantity = quantity + 1 WHERE cart.id = $userId AND cart.itemId = $itemId";
-        print "item if: " . $itemId . "<br>";
+        $increaseQuantityQuery = "UPDATE cart SET quantity = quantity + 1 WHERE cart.id = :userId AND cart.itemId = :itemId";
+        print "item id: " . $itemId . "<br>";
         $increaseQuantity = $db->prepare($increaseQuantityQuery);
         $increaseQuantity->bindParam(':userId', $userId, PDO::PARAM_INT);
         $increaseQuantity->bindParam(':itemId', $itemId, PDO::PARAM_INT);
