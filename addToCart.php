@@ -22,7 +22,6 @@
 
     $numAlreadyInCartQuery = "SELECT * FROM cart WHERE cart.itemId = $itemId";
     $numAlreadyInCart = $db->query($numAlreadyInCartQuery);
-    print "num already in cart : " . $numAlreadyInCart[0];
     print "num already in cart : " . $numAlreadyInCart;
     if ($numAlreadyInCart == 0){
         $insertQuery = "INSERT INTO cart (id, itemId, quantity) VALUES (:userId, :itemId, 1)";
