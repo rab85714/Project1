@@ -48,7 +48,7 @@ function myFunction() {
   // get value of the email input
   let x = document.getElementById("email").value;
   let y = document.getElementById("password").value;
-  var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   //if email is blank, send this error
   if (x=="") {
@@ -60,7 +60,7 @@ function myFunction() {
   } else if (!(x.match(mailformat)) && x!="") {
     alert("Please enter a valid email address.");
   } else {
-    
+
   }
 
 }
