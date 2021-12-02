@@ -47,10 +47,10 @@ function myFunction() {
 
   // set a text variable to be loaded into the page
   let text;
-
+  let thismessage = "going into function";
+  console.log(thismessage);
   // get value of the email input
   let x = document.getElementById("email").value;
-
   //if email is blank, send this error
   if (x=="") {
     text = "Please enter your email.";
@@ -64,7 +64,6 @@ function myFunction() {
   if (y=="") {
     text = "Please enter your password.";
   }
-
 
   if(x=="" & y=="") {
     text = "Please enter you email and password.";
