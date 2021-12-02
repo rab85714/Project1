@@ -12,9 +12,9 @@
 <body>
 <?php
   if (isset($_POST['remove'])) {
-    $itemId = filter_input(INPUT_POST, 'id');
+    $itemIdRaw = filter_input(INPUT_POST, 'itemId');
     // TODO : itemId is not being grabbed from the remove button
-    //$itemId = $itemIdRaw[0];
+    $itemId = $itemIdRaw[0];
     $email = $_SESSION['email'];
     $userQuery = "SELECT * FROM user WHERE email = :email";
     $userPrep = $db->prepare($userQuery);
