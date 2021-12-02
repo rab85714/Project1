@@ -24,7 +24,8 @@
     $numAlreadyInCart = $db->prepare($numAlreadyInCartQuery);
     $numAlreadyInCart->bindParam(':itemId', $itemId, PDO::PARAM_INT);
     $numAlreadyInCart->bindParam(':userId', $userId, PDO::PARAM_INT);
-    $count = $numAlreadyInCart->execute();
+    $temp = $numAlreadyInCart->execute();
+    $count = $temp->rowCount();
     print "count " . $count . "<br>";
     if ($count == 0){
         $insertQuery = "INSERT INTO cart (id, itemId, quantity) VALUES (:userId, :itemId, 1)";
