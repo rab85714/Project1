@@ -54,6 +54,7 @@ function myFunction() {
   //if email is blank, send this error
   if (x=="") {
     text = "Please enter your email.";
+    console.log("realizes email is blank");
   }
 
   // get value of password input
@@ -71,7 +72,7 @@ function myFunction() {
 
   // if email is invalid email format, send this error
   var mailformat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
-  if (!(x.test(mailformat)) {
+  if (!(x.test(mailformat))) {
     text = "Please enter a valid email address.";
   }
 
