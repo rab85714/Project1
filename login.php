@@ -61,7 +61,7 @@ function myFunction() {
   }
 
   if(x=="" & y=="") {
-    alert("Please enter you email and password.";
+    alert("Please enter you email and password.");
   }
 
   // if email is invalid email format, send this error
