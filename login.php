@@ -59,9 +59,10 @@ function myFunction() {
     text = "Please enter you email and password.";
   }
 
-  if (!value) {
-    text = "";
+  if(!text) {
+    text ="";
   }
+
   document.getElementById("demo").innerHTML = text;
 
 }
