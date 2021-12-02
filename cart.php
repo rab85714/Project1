@@ -62,14 +62,15 @@
     $total = 0;
     foreach ($cart as $item) :?>
       <tr class="item_row">
-        <form action="removeFromCart.php" method="post">
             <td><?php $total = $total + $item['price']; ?></td>
             <td> <?php echo $item['name']; ?></td>
             <td> <?php echo $item['price']; ?></td>
-            <form action="addToCart.php" method="post">
-                <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
-                <a><input type="submit" name="remove" value="X"></a>
-            </form>
+            <td>
+                <form action="removeFromCart.php" method="post">
+                    <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
+                    <a><input type="submit" name="remove" value="X"></a>
+                </form>
+            </td>
       </tr>
     <?php endforeach;?>
     </table>
