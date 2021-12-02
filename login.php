@@ -9,6 +9,16 @@
       margin: 0;
       padding: 0;
     }
+    body h1 {
+      text-align: center;
+    }
+    body h3 {
+      text-align: center;
+    }
+    #submitButton {
+      text-align: center;
+    }
+
   </style>
 </head>
 <body>
@@ -28,7 +38,7 @@
           <input type="password" id="password" name="password" required></div>
           <br>
         <div>
-          <div><input onclick="myFunction()" type="submit" value="Login" name = "Login"></div>
+          <div><input id="submitButton" onclick="myFunction()" type="submit" value="Login" name = "Login"></div>
           <br>
         </div>
         </form>
