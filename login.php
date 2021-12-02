@@ -5,19 +5,9 @@
   <title>Mario's Bistro Login</title>
   <style>
     body {
-      margin-top: 100px;
       background: #E5E5E5;
       margin: 0;
       padding: 0;
-      text-align: center;
-    }
-    body h1 {
-      text-align: center;
-    }
-    body h3 {
-      text-align: center;
-    }
-    #submitButton {
       text-align: center;
     }
 
