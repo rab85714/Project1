@@ -20,11 +20,11 @@
     $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
     $userId = $userPrep->execute();
 
-    $numAlreadyInCartQuery = "SELECT * FROM cart WHERE cart.itemId = $itemId";
+    $numAlreadyInCartQuery = "SELECT * FROM cart WHERE cart.itemId = :itemId";
     $numAlreadyInCart = $db->prepare($numAlreadyInCartQuery);
     $numAlreadyInCart->bindParam(':itemId', $itemId, PDO::PARAM_INT);
     $count = $numAlreadyInCart->execute();
-    print "count" . $count;
+    print "count " . $count;
     if ($count == 0){
         $insertQuery = "INSERT INTO cart (id, itemId, quantity) VALUES (:userId, :itemId, 1)";
         $insert = $db->prepare($insertQuery);
