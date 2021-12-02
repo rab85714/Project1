@@ -7,8 +7,8 @@
     header("location: login.php");
   }
 
-// this query contains the following variables: id, itemId, name, and price
-  $queryCart = "SELECT user.id, cart.itemId, menuitem.name, menuitem.price FROM cart, user, menuitem
+// this query contains the following variables: id, itemId, quantity, name, and price
+  $queryCart = "SELECT user.id, cart.itemId, cart.quantity, menuitem.name, menuitem.price FROM cart, user, menuitem
                     WHERE user.email = '$email' AND user.id = cart.id AND cart.itemId = menuitem.id";
 
   $cart = $db->query($queryCart);
