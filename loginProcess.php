@@ -19,7 +19,7 @@
   if ($isValid) {
     session_start();
   	$_SESSION['email'] = $email;
-  	header("location: menu.php");
+  	header("location: index.php");
   } else {
       header("location: login.php");
   }
