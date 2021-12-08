@@ -32,6 +32,8 @@
         $increaseQuantity->bindParam(':itemId', $itemId, PDO::PARAM_INT);
         $increaseQuantity->bindParam(':newQuantity', $itemQuantity, PDO::PARAM_INT);
         $result = $increaseQuantity->execute();
+
+        header('location: cart.php');
     }
 ?>
 </body>
