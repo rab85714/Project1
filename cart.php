@@ -67,6 +67,7 @@
             <td><input type="number" placeholder = "<?php echo $item['quantity'] ?>" min = 1 max = 10></td>
             <td>
                 <form action="updateQuantity.php" method="post">
+                    <a><input type="number" placeholder = "<?php echo $item['quantity'] ?>" min = 1 max = 10></a>
                     <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
                     <a><input type="hidden" name="quantity" value="<?php echo $item['quantity']?>"></a>
                     <a><input type="submit" name="update" value="Update"></a>
