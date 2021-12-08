@@ -82,10 +82,9 @@
             </td>
       </tr>
       <?php endforeach;?>
-      <tr>
-        <a><?php echo "Total: " . $total; ?></a>
-      </tr>
+
     </table>
+    <p><?php echo "Total: " . $total; ?></p>
   </div>
 
   <footer>
