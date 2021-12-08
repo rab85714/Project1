@@ -68,10 +68,10 @@
                 <form action="updateQuantity.php" method="post">
                     <a><input type="number" name="quantity" value = "<?php echo $item['quantity'] ?>" min = 1 max = 10></a>
                     <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
-                    <a><input type="submit" name="update" value="Update"></a>
+                    <a><input type="submit" name="update" value="Update Quantity"></a>
                 </form>
             </td>
-            <td> <?php echo $item['price']; ?></td>
+            <td> <?php echo ($item['price'] * $item['quantity']); ?> </td>
             <td>
                 <form action="removeFromCart.php" method="post">
                     <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
