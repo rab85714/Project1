@@ -71,7 +71,9 @@
                     <a><input type="submit" name="update" value="Update Quantity"></a>
                 </form>
             </td>
-            <td> <?php echo ($item['price'] * $item['quantity']); ?> </td>
+            <?php $itemTotal = $item['price'] * $item['quantity']; ?>
+            <td> <?php echo $itemTotal; ?> </td>
+            <?php $total = $total + $itemTotal; ?>
             <td>
                 <form action="removeFromCart.php" method="post">
                     <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
@@ -79,7 +81,9 @@
                 </form>
             </td>
       </tr>
-    <?php endforeach;?>
+      <tr>
+        <a><?php echo "Total: " . $total; ?></a>
+      </tr>
     </table>
   </div>
 
