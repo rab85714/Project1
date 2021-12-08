@@ -26,10 +26,11 @@
         print "item id: " . $itemId . "<br>";
         print "quantity: " . $itemQuantity . "<br>";
 
-        $increaseQuantityQuery = "UPDATE cart SET quantity = quantity + 1 WHERE cart.id = :userId AND cart.itemId = :itemId";
+        $increaseQuantityQuery = "UPDATE cart SET quantity = :newQuantity WHERE cart.id = :userId AND cart.itemId = :itemId";
         $increaseQuantity = $db->prepare($increaseQuantityQuery);
         $increaseQuantity->bindParam(':userId', $userId, PDO::PARAM_INT);
         $increaseQuantity->bindParam(':itemId', $itemId, PDO::PARAM_INT);
+        $increaseQuantity->bindParam(':newQuantity', $itemQuantity, PDO::PARAM_INT);
         $result = $increaseQuantity->execute();
     }
 ?>
