@@ -81,6 +81,7 @@
                 </form>
             </td>
       </tr>
+      <?php endforeach;?>
       <tr>
         <a><?php echo "Total: " . $total; ?></a>
       </tr>
