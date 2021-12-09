@@ -84,6 +84,7 @@
       <?php endforeach;?>
 
     </table>
+    <br>
     <form action="checkout.php" method="post">
         <a><?php echo "Total: $" . $total; ?></a>
         <a><input type="submit" name="checkout" value="Checkout"></a>
