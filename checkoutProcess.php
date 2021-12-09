@@ -27,7 +27,7 @@
             $paymentName = "";
             if (isset($_POST['radioLocation'])) {
                 $locationId = $_POST['radioLocation'];
-                print "location: " . $locationId . "<br>";
+                print "location: " . ($locationId * 1) . "<br>";
             }
             if (isset($_POST['radioPayment'])) {
                 $paymentName = $_POST['radioPayment'];
