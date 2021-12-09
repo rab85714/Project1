@@ -21,21 +21,22 @@
 </head>
 <body>
     <?php
-        if (isset($_POST['submitCheckout'])) {
-            $total = 0;
-            $locationId = 0;
-            $paymentName = "";
-            if (isset($_POST['radioLocation'])) {
-                $locationId = $_POST['radioLocation'];
-                print "location: " . ($locationId * 1) . "<br>";
-            }
-            if (isset($_POST['radioPayment'])) {
-                $paymentName = $_POST['radioPayment'];
-                print "payment: " . $paymentName . "<br>";
-            }
+        if (!isset($_POST['submitCheckout'])) {
+            alret("Something went wrong, Please try again.");
+            header('location: checkout.php');
         }
 
-
+        $total = 0;
+        $locationId = 0;
+        $paymentName = "";
+        if (isset($_POST['radioLocation'])) {
+            $locationId = $_POST['radioLocation'];
+            print "location: " . ($locationId * 1) . "<br>";
+        }
+        if (isset($_POST['radioPayment'])) {
+            $paymentName = $_POST['radioPayment'];
+            print "payment: " . $paymentName . "<br>";
+        }
     ?>
 
     <table>
