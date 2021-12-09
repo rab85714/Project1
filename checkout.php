@@ -96,22 +96,22 @@
     <?php $selectedLocation = 0; ?>
     <script>
         function display() {
-            $selectedLocation = 0;
+            var selectedLocation = 0;
             if(document.getElementById(1).checked) {
-                $selectedLocation = 1;
+                selectedLocation = 1;
             }
             else if(document.getElementById(2).checked) {
-                $selectedLocation = 2;
+                selectedLocation = 2;
             }
 
-            $selectedPayment = "";
+            var selectedPayment = "";
             if(document.getElementById("cash"){
-                $selectedPayment = "cash";
+                selectedPayment = "cash";
             } else if(document.getElementById("card"){
-                $selectedPayment = "card";
+                selectedPayment = "card";
             }
-            $alertMessage = "location: " + $selectedLocation + " payment: " + $selectedPayment;
-            alert($alertMessage);
+            alertMessage = "location: " + selectedLocation + " payment: " + selectedPayment;
+            alert(alertMessage);
         }
     </script>
 </html>
