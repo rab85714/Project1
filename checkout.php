@@ -85,7 +85,9 @@
                 <label> Card in store </label>
             </td>
         </tr>
-        <input type="submit" name="submitCheckout" value="Place Order">
+        <tr><td>
+            <input type="submit" name="submitCheckout" value="Place Order">
+        </tr></td>
       </form>
     </table>
 
