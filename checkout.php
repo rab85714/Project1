@@ -51,7 +51,9 @@
     <table>
       <form action="debug.php" method="post">
         <tr>
-            <h1> Pick a location. </h1>
+            <td>
+                <h1> Pick a location. </h1>
+            </td>
         </tr>
         <?php foreach ($locations as $location) :?>
             <tr class="location_row">
@@ -67,7 +69,9 @@
 
         <br>
         <tr>
-            <h1> Pick a payment method. </h1>
+            <td>
+                <h1> Pick a payment method. </h1>
+            </td>
         </tr>
         <tr>
             <td>
@@ -106,7 +110,7 @@
                 $selectedPayment = "card";
             }
 
-            alert("location: " . $selectedLocation . " payment: " . $selectedPayment);
+            alert("location: " + $selectedLocation + " payment: " + $selectedPayment);
         }
     </script>
 </html>
