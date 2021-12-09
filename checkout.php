@@ -64,6 +64,7 @@
                 <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
             </tr>
           </tr>
+          <br>
           <?php endforeach;?>
           <tr>
             <td><input type="button" onClick="display()" value="Place Order"></td>
