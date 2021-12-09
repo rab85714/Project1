@@ -37,6 +37,7 @@
             $locationQuery = "SELECT * FROM locations WHERE locations.id = :locationId";
             $locationPrepare = $db->prepare($locationQuery);
             $locationPrepare->bindParam(':locationId', $locationId, PDO::PARAM_INT);
+            print "mid query location id: " . $locationId . "<br>";
             $location = $locationPrepare->execute();
 
             print "location query : " . $location . "<br>";
@@ -47,7 +48,7 @@
             print "payment: " . $paymentName . "<br>";
         }
     ?>
-
+    <br>
     <table>
         <?php foreach ($cart as $item) :?>
             <tr class="item_row">
