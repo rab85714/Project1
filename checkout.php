@@ -49,7 +49,7 @@
 </header>
 <body>
     <table>
-      <form action="debug.php" method="post">
+      <form action="checkoutProcess.php" method="post">
         <tr>
             <td>
                 <h1> Pick a location. </h1>
@@ -90,28 +90,7 @@
     </table>
     <br>
 
-    <input type="button" onClick="display()" value="Place Order">
+    <input type="submit" name="submitCheckout" value="Place Order">
 
 </body>
-    <?php $selectedLocation = 0; ?>
-    <script>
-        function display() {
-            var selectedLocation = 0;
-            if(document.getElementById(1).checked) {
-                selectedLocation = 1;
-            }
-            else if(document.getElementById(2).checked) {
-                selectedLocation = 2;
-            }
-
-            var selectedPayment = "";
-            if(document.getElementById("cash"){
-                selectedPayment = "cash";
-            } else if(document.getElementById("card"){
-                selectedPayment = "card";
-            }
-            alertMessage = "location: " + selectedLocation + " payment: " + selectedPayment;
-            alert(alertMessage);
-        }
-    </script>
 </html>
