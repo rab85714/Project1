@@ -39,9 +39,9 @@
                 locations.streetNumber,
                 locations.streetName,
                 locations.city,
-                locations.state, 
+                locations.state,
                 locations.zipCode
-                FROM locations WHERE locations.id = $locationId";
+                FROM locations WHERE locations.id = '$locationId'";
             $locationPrep = $db->prepare($locationQuery);
             //$locationPrep->bindParam(':locationId', $locationId, PDO::PARAM_INT);
             print "mid query location id: " . $locationId . "<br>";
