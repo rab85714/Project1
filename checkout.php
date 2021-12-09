@@ -52,26 +52,26 @@
       <tr>
         <h1> Pick a location. </h1>
       </tr>
-      <form action="menu.php" method="post">
+      <form action="" method="post">
         <?php
         foreach ($locations as $location) :?>
           <tr class="location_row">
-                    <td>
-                        <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
-                        <input type="radio" required>
-                        <label> <?php echo $location['name']; ?> </label>
-
-                    </td>
-                    <tr>
-                        <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
-                    </tr>
+            <td>
+                <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
+                <input type="radio" required>
+                <label> <?php echo $location['name']; ?> </label>
+            </td>
+            <tr>
+                <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
+            </tr>
           </tr>
           <?php endforeach;?>
-          <tr>
-            <a><input type="submit" value="Place Order"></a>
-          </tr>
       </form>
     </table>
+    <br>
+    <form action="debug.php" method="post">
+        <a><input type="submit" value="Place Order"></a>
+    </form>
 
     <script>
         function clickAlert() {
