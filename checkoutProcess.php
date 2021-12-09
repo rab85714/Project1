@@ -22,7 +22,7 @@
 <body>
     <?php
         if (!isset($_POST['submitCheckout'])) {
-            alret("Something went wrong, Please try again.");
+            echo '<script> alert("Something went wrong, Please try again.") </script>';
             header('location: checkout.php');
         }
 
@@ -49,7 +49,7 @@
 
             print "location query : " . $location . "<br>";
         } else {
-            alret("Something went wrong, Please try again.");
+            echo '<script> alert("Something went wrong, Please try again.") </script>';
             header('location: checkout.php');
         }
 
@@ -57,7 +57,7 @@
             $paymentName = $_POST['radioPayment'];
             print "payment: " . $paymentName . "<br>";
         } else {
-            alret("Something went wrong, Please try again.");
+            echo '<script> alert("Something went wrong, Please try again.") </script>';
             header('location: checkout.php');
         }
     ?>
