@@ -13,7 +13,7 @@
     <?php
         if (isset($_POST['submitCheckout'])) {
 
-            echo 'payment selected ' .$_POST['submitCheckout'];
+            echo 'payment selected ' .$_POST['radioPayment'];
 
             /* $radioLocation = filter_input(INPUT_POST, 'radioLocation');
             $selectedLocation = $radioLocation[0];
