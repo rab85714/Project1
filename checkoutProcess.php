@@ -64,7 +64,7 @@
     <?php
         $locationQuery = "SELECT * FROM locations WHERE id = :locationId";
         $locationPrepare = $db->prepare($locationQuery);
-        $locationPrepare = bindParam(':locationId', $locationId, PDO::PARAM_INT);
+        $locationPrepare->bindParam(':locationId', $locationId, PDO::PARAM_INT);
         $location = $locationPrepare->execute();
     ?>
     <p><?php echo $location['name']; ?></p><br>
