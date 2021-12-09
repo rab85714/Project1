@@ -56,7 +56,7 @@
     foreach ($locations as $location) :?>
       <tr class="location_row">
             <td>
-                <form method="post">
+                <form action="menu.php" method="post">
 
                     <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
                     <a><input type="submit" onClick="clickAlert()" name="update" value="<?php echo $location['name']; ?>"></a>
