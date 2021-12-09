@@ -17,8 +17,10 @@
             $radioPayment = filter_input(INPUT_POST, 'radioPayment');
             $selectedPayment = $radioPayment[0];
 
-            print "location: " . $selectedLocation . "<br>";
-            print "payment: " . $selectedPayment . "<br>";
+            print "location s: " . $selectedLocation . "<br>";
+            print "location r: " . $radioLocation . "<br>";
+            print "payment s: " . $selectedPayment . "<br>";
+            print "payment r: " . $radioPayment . "<br>";
         }
     ?>
 </body>
