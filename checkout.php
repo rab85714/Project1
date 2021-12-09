@@ -58,7 +58,7 @@
         <?php foreach ($locations as $location) :?>
             <tr class="location_row">
                 <td>
-                    <input type="radio" name="radioLocation" id="<?php echo $location['id']?>">
+                    <input type="radio" name="radioLocation" value="<?php echo $location['id']?>">
                     <label> <?php echo $location['name']; ?> </label>
                 </td>
             <tr>
@@ -68,6 +68,7 @@
         <?php endforeach;?>
 
         <br>
+
         <tr>
             <td>
                 <h1> Pick a payment method. </h1>
@@ -75,13 +76,13 @@
         </tr>
         <tr>
             <td>
-                <input type="radio" name="radioPayment" id="cash">
+                <input type="radio" name="radioPayment" value="cash">
                 <label> Cash in store </label>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="radio" name="radioPayment" id="card">
+                <input type="radio" name="radioPayment" value="card">
                 <label> Card in store </label>
             </td>
         </tr>
