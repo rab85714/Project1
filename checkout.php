@@ -48,7 +48,6 @@
   </nav>
 </header>
 <body>
-    <div class="grid-container">
         <table>
           <tr>
             <h1> Pick a location. </h1>
@@ -57,7 +56,8 @@
         foreach ($locations as $location) :?>
           <tr class="location_row">
                 <td>
-                    <form action="cart.php" method="post">
+                    <form action="successMessage" method="post">
+
                         <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
                         <a><input type="submit" name="update" value="<?php echo $location['name']; ?>"></a>
                     </form>
@@ -69,5 +69,8 @@
           <?php endforeach;?>
 
         </table>
+        <?php if (action == "successMessage"){
+            "<script>alert("Welcome to Geeks for Geeks")</script>"
+        }
 </body>
 </html>
