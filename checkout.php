@@ -73,14 +73,17 @@
     <br>
 
 </body>
+    <?php $selectedLocation = 0; ?>
     <script>
         function display() {
+            $selectedLocation = 0;
             if(document.getElementById(1).checked) {
-                alert('1');
+                $selectedLocation = 1;
             }
             else if(document.getElementById(2).checked) {
-                alert('2');
+                $selectedLocation = 2;
             }
+            alert($selectedLocation);
         }
     </script>
 </html>
