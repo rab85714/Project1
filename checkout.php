@@ -65,7 +65,9 @@
             </tr>
           </tr>
           <?php endforeach;?>
-          <input type="button" onClick="display()" value="Place Order"></a>
+          <tr>
+            <td><input type="button" onClick="display()" value="Place Order"></td>
+          </tr>
       </form>
     </table>
     <br>
