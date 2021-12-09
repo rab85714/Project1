@@ -109,8 +109,8 @@
             } else if(document.getElementById("card"){
                 $selectedPayment = "card";
             }
-
-            alert("location: " + $selectedLocation + " payment: " + $selectedPayment);
+            $alertMessage = "location: " + $selectedLocation + " payment: " + $selectedPayment;
+            alert($alertMessage);
         }
     </script>
 </html>
