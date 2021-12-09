@@ -52,7 +52,7 @@
       <tr>
         <h1> Pick a location. </h1>
       </tr>
-      <form action="" method="post">
+      <form action="debug.php" method="post">
         <?php
         foreach ($locations as $location) :?>
           <tr class="location_row">
@@ -69,16 +69,6 @@
       </form>
     </table>
     <br>
-    <?php
-        if(isset($Post['submit'])) {
-            if(document.getElementById(1).checked) {
-                alert('1');
-            }
-            else if(document.getElementById(2).checked) {
-                alert('2');
-            }
-        }
-    ?>
 
 </body>
 </html>
