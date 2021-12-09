@@ -72,7 +72,7 @@
 
     <script>
         function clickAlert() {
-            alert("Alert!");
+            confirm("Alert!");
         }
     </script>
 </body>
