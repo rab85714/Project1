@@ -12,18 +12,12 @@
 <body>
     <?php
         if (isset($_POST['submitCheckout'])) {
-
-            echo 'payment selected ' .$_POST['radioPayment'];
-
-            /* $radioLocation = filter_input(INPUT_POST, 'radioLocation');
-            $selectedLocation = $radioLocation[0];
-            $radioPayment = filter_input(INPUT_POST, 'radioPayment', FILTER_SANITIZE_STRING);
-            $selectedPayment = $radioPayment[0];
-
-            print "location s: " . $selectedLocation . "<br>";
-            print "location r: " . $radioLocation . "<br>";
-            print "payment s: " . $selectedPayment . "<br>";
-            print "payment r: " . $radioPayment . "<br>"; */
+            if (isset($_POST['radioLocation'])) {
+                print "location: " . $_POST['radioLocation'] . "<br>";
+            }
+            if (isset($_POST['radioPayment'])) {
+                print "payment: " . $_POST['radioPayment'] . "<br>";
+            }
         }
     ?>
 </body>
