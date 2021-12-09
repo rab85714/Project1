@@ -23,7 +23,6 @@
     <?php
         if (!isset($_POST['submitCheckout'])) {
             echo '<script> alert("Something went wrong, Please try again.") </script>';
-            header('location: checkout.php');
         }
 
         $total = 0;
@@ -49,16 +48,20 @@
 
             print "location query : " . $location . "<br>";
         } else {
-            echo '<script> alert("Something went wrong, Please try again.") </script>';
-            header('location: checkout.php');
+            echo ("<script LANGUAGE='JavaScript'>
+                window.alert('Something went wrong, Please try again.');
+                window.location.href='checkout.php';
+                </script>");
         }
 
         if (isset($_POST['radioPayment'])) {
             $paymentName = $_POST['radioPayment'];
             print "payment: " . $paymentName . "<br>";
         } else {
-            echo '<script> alert("Something went wrong, Please try again.") </script>';
-            header('location: checkout.php');
+            echo ("<script LANGUAGE='JavaScript'>
+                window.alert('Something went wrong, Please try again.');
+                window.location.href='checkout.php';
+                </script>");
         }
     ?>
     <br>
