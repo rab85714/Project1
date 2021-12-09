@@ -52,22 +52,25 @@
       <tr>
         <h1> Pick a location. </h1>
       </tr>
-    <?php
-    foreach ($locations as $location) :?>
-      <tr class="location_row">
-            <td>
-                <form action="menu.php" method="post">
+      <form action="menu.php" method="post">
+        <?php
+        foreach ($locations as $location) :?>
+          <tr class="location_row">
+                    <td>
+                        <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
+                        <input type="radio">
+                        <label> <?php echo $location['name']; ?> </label>
 
-                    <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
-                    <a><input type="submit" onClick="clickAlert()" name="update" value="<?php echo $location['name']; ?>"></a>
-                </form>
-            </td>
-            <tr>
-                <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
-            </tr>
-      </tr>
-      <?php endforeach;?>
-
+                    </td>
+                    <tr>
+                        <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
+                    </tr>
+          </tr>
+          <?php endforeach;?>
+          <tr>
+            <a><input type="submit" value="Place Order"></a>
+          </tr>
+      </form>
     </table>
 
     <script>
