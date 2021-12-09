@@ -22,9 +22,6 @@
         $userPrep = $db->prepare($userQuery);
         $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
         $userId = $userPrep->execute();
-        print "user id: " . $userId . "<br>";
-        print "item id: " . $itemId . "<br>";
-        print "quantity: " . $itemQuantity . "<br>";
 
         $increaseQuantityQuery = "UPDATE cart SET quantity = :newQuantity WHERE cart.id = :userId AND cart.itemId = :itemId";
         $increaseQuantity = $db->prepare($increaseQuantityQuery);

@@ -6,6 +6,9 @@
   if (!isset($email)) {
     header("location: login.php");
   }
+
+  $queryLocations = "SELECT * FROM locations";
+  $locations = $db->query($queryLocations);
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +48,21 @@
   </nav>
 </header>
 <body>
-<?php echo "page works"; ?>
+    <div class="grid-container">
+        <table>
+          <tr>
+            <h1> Pick a location. </h1>
+          </tr>
+        <?php
+        foreach ($locations as $location) :?>
+          <tr class="location_row">
+                <td><h2><?php echo $location['name']; ?></h2></td>
+                <tr>
+                    <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
+                </tr>
+          </tr>
+          <?php endforeach;?>
+
+        </table>
 </body>
 </html>
