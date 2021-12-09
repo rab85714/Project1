@@ -57,7 +57,7 @@
         foreach ($locations as $location) :?>
           <tr class="location_row">
             <td>
-                <input type="radio" id="<?php echo $location['id']?>">
+                <input type="radio" name="radioLocation" id="<?php echo $location['id']?>">
                 <label> <?php echo $location['name']; ?> </label>
             </td>
             <tr>
