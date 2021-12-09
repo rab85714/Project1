@@ -48,30 +48,36 @@
   </nav>
 </header>
 <body>
-        <table>
-          <tr>
-            <h1> Pick a location. </h1>
-          </tr>
-        <?php
-        foreach ($locations as $location) :?>
-          <tr class="location_row">
-                <td>
-                    <form action="successMessage" method="post">
+    <table>
+      <tr>
+        <h1> Pick a location. </h1>
+      </tr>
+    <?php
+    foreach ($locations as $location) :?>
+      <tr class="location_row">
+            <td>
+                <form method="post">
 
-                        <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
-                        <a><input type="submit" name="update" value="<?php echo $location['name']; ?>"></a>
-                    </form>
-                </td>
-                <tr>
-                    <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
-                </tr>
-          </tr>
-          <?php endforeach;?>
+                    <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
+                    <a><input type="submit" onClick="clickAlert()" name="update" value="<?php echo $location['name']; ?>"></a>
+                </form>
+            </td>
+            <tr>
+                <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
+            </tr>
+      </tr>
+      <?php endforeach;?>
 
-        </table>
-        <?php if (action == "successMessage"){
-            alert('hi');
+    </table>
+    <?php if (action == "successMessage"){
+        alert('hi');
+    }
+    ?>
+
+    <script>
+        function clickAlert() {
+            alert("Alert!");
         }
-        ?>
+    </script>
 </body>
 </html>
