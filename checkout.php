@@ -70,7 +70,7 @@
 
         </table>
         <?php if (action == "successMessage"){
-            "<script>alert("hi")</script>"
+            "<script>alert('hi')</script>"
         }
         ?>
 </body>
