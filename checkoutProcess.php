@@ -63,11 +63,11 @@
     <br>
     <?php
         $locationQuery = "SELECT * FROM locations WHERE id = $locationId";
-        /* $locationPrepare = $db->prepare($locationQuery);
-        $locationPrepare->bindParam(':locationId', $locationId, PDO::PARAM_INT);
-        $location = $locationPrepare->execute(); */
-        $location = $db->query($locationQuery);
-        print "location query : " . $location[0] . "<br>";
+        $locationPrepare = $db->prepare($locationQuery);
+        //$locationPrepare->bindParam(':locationId', $locationId, PDO::PARAM_INT);
+        $location = $locationPrepare->execute();
+
+        print "location query : " . $location . "<br>";
     ?>
     <p><?php echo $location['name']; ?></p><br>
     <p><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?>
