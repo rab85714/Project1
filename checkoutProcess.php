@@ -30,7 +30,7 @@
         $paymentName = "";
 
         if (isset($_POST['radioLocation'])) {
-            $locationId = $_POST['radioLocation'] * 1;
+            $locationId = ($_POST['radioLocation'] + 0);
             print "location: " . ($locationId * 1) . "<br>";
 
             $locationQuery = "SELECT
@@ -40,17 +40,16 @@
                 locations.city,
                 locations.state,
                 locations.zipCode
-                FROM locations WHERE locations.id = '$locationId'";
+                FROM locations WHERE id = :locationId";
             $locationPrep = $db->prepare($locationQuery);
-            //$locationPrep->bindParam(':locationId', $locationId, PDO::PARAM_INT);
-            print "mid query location id: " . $locationId . "<br>";
+            $locationPrep->bindValue(':locationId', $locationId, PDO::PARAM_INT);
             $location = $locationPrep->execute();
 
             print "location query : " . $location . "<br>";
         } else {
             echo ("<script LANGUAGE='JavaScript'>
+                window.alert('Please select a location and a payment method.');
                 window.location.href='checkout.php';
-                confirm('Something went wrong, Please try again.');
                 </script>");
         }
 
@@ -59,7 +58,7 @@
             print "payment: " . $paymentName . "<br>";
         } else {
             echo ("<script LANGUAGE='JavaScript'>
-                window.alert('Something went wrong, Please try again.');
+                window.alert('Please select a location and a payment method.');
                 window.location.href='checkout.php';
                 </script>");
         }
