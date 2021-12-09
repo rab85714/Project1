@@ -37,7 +37,7 @@
     ?>
 
     <table>
-        foreach ($cart as $item) :?>
+        <?php foreach ($cart as $item) :?>
             <tr class="item_row">
                 <td><?php $total = $total + $item['price']; ?></td>
                 <td> <?php echo $item['name']; ?></td>
