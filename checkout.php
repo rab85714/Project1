@@ -58,7 +58,7 @@
           <tr class="location_row">
                     <td>
                         <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
-                        <input type="radio">
+                        <input type="radio" required>
                         <label> <?php echo $location['name']; ?> </label>
 
                     </td>
