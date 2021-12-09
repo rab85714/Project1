@@ -12,7 +12,7 @@
 <body>
     <?php
         if (isset($_POST['submitCheckout'])) {
-            if (isset($_POST['radioLocation']) {
+            if (isset($_POST['radioLocation'])) {
                 print "location: " . $_POST['radioLocation'] . "<br>";
             }
             if (isset($_POST['radioPayment'])) {
