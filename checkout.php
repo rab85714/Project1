@@ -69,10 +69,6 @@
       <?php endforeach;?>
 
     </table>
-    <?php if (action == "successMessage"){
-        alert('hi');
-    }
-    ?>
 
     <script>
         function clickAlert() {
