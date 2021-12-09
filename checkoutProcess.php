@@ -29,10 +29,19 @@
         $total = 0;
         $locationId = 0;
         $paymentName = "";
+
         if (isset($_POST['radioLocation'])) {
             $locationId = $_POST['radioLocation'];
             print "location: " . ($locationId * 1) . "<br>";
+
+            $locationQuery = "SELECT * FROM locations WHERE locations.id = :locationId";
+            $locationPrepare = $db->prepare($locationQuery);
+            $locationPrepare->bindParam(':locationId', $locationId, PDO::PARAM_INT);
+            $location = $locationPrepare->execute();
+
+            print "location query : " . $location . "<br>";
         }
+
         if (isset($_POST['radioPayment'])) {
             $paymentName = $_POST['radioPayment'];
             print "payment: " . $paymentName . "<br>";
@@ -59,15 +68,6 @@
     <p><?php echo "Payment Method: " . $paymentName . " (in store)"; ?>
     <br>
 
-    <br>
-    <?php
-        $locationQuery = "SELECT * FROM locations WHERE locations.id = :locationId";
-        $locationPrepare = $db->prepare($locationQuery);
-        $locationPrepare->bindParam(':locationId', $locationId, PDO::PARAM_INT);
-        $location = $locationPrepare->execute();
-
-        print "location query : " . $location . "<br>";
-    ?>
     <p><?php echo $location['name']; ?></p><br>
     <p><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?>
 
