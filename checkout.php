@@ -49,28 +49,44 @@
 </header>
 <body>
     <table>
-      <tr>
-        <h1> Pick a location. </h1>
-      </tr>
       <form action="debug.php" method="post">
-        <?php
-        foreach ($locations as $location) :?>
-          <tr class="location_row">
-            <td>
-                <input type="radio" name="radioLocation" id="<?php echo $location['id']?>">
-                <label> <?php echo $location['name']; ?> </label>
-            </td>
+        <tr>
+            <h1> Pick a location. </h1>
+        </tr>
+        <?php foreach ($locations as $location) :?>
+            <tr class="location_row">
+                <td>
+                    <input type="radio" name="radioLocation" id="<?php echo $location['id']?>">
+                    <label> <?php echo $location['name']; ?> </label>
+                </td>
             <tr>
                 <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
             </tr>
-          </tr>
-          <?php endforeach;?>
-          <tr>
-            <td><input type="button" onClick="display()" value="Place Order"></td>
-          </tr>
+            </tr>
+        <?php endforeach;?>
+
+        <br>
+        <tr>
+            <h1> Pick a payment method. </h1>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" name="radioPayment" id="cash">
+                <label> Cash in store </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" name="radioPayment" id="card">
+                <label> Card in store </label>
+            </td>
+        </tr>
+
       </form>
     </table>
     <br>
+
+    <input type="button" onClick="display()" value="Place Order">
 
 </body>
     <?php $selectedLocation = 0; ?>
@@ -79,11 +95,18 @@
             $selectedLocation = 0;
             if(document.getElementById(1).checked) {
                 $selectedLocation = 1;
-            }
-            else if(document.getElementById(2).checked) {
+            } else if(document.getElementById(2).checked) {
                 $selectedLocation = 2;
             }
-            alert($selectedLocation);
+
+            $selectedPayment = "";
+            if(document.getElementById("cash"){
+                $selectedPayment = "cash";
+            } else if(document.getElementById("card"){
+                $selectedPayment = "card";
+            }
+
+            alert("location: " . $selectedLocation . " payment: " . $selectedPayment);
         }
     </script>
 </html>
