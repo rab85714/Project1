@@ -11,10 +11,6 @@
                     WHERE user.email = '$email' AND user.id = cart.id AND cart.itemId = menuitem.id";
 
   $cart = $db->query($queryCart);
-
-  $total = 0;
-  $locationId = 0;
-  $paymentName = "";
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +21,10 @@
 </head>
 <body>
     <?php
-
         if (isset($_POST['submitCheckout'])) {
+            $total = 0;
+            $locationId = 0;
+            $paymentName = "";
             if (isset($_POST['radioLocation'])) {
                 $locationId = $_POST['radioLocation'];
                 print "location: " . $locationId . "<br>";
@@ -62,9 +60,9 @@
 
     <br>
     <?php
-        $locationQuery = "SELECT * FROM locations WHERE id = $locationId";
+        $locationQuery = "SELECT * FROM locations WHERE locations.id = :locationId";
         $locationPrepare = $db->prepare($locationQuery);
-        //$locationPrepare->bindParam(':locationId', $locationId, PDO::PARAM_INT);
+        $locationPrepare->bindParam(':locationId', $locationId, PDO::PARAM_INT);
         $location = $locationPrepare->execute();
 
         print "location query : " . $location . "<br>";
