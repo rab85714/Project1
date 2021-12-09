@@ -57,8 +57,7 @@
         foreach ($locations as $location) :?>
           <tr class="location_row">
             <td>
-                <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
-                <input type="radio" required>
+                <input type="radio" id="<?php echo $location['id']?>" required>
                 <label> <?php echo $location['name']; ?> </label>
             </td>
             <tr>
@@ -70,13 +69,18 @@
     </table>
     <br>
     <form action="debug.php" method="post">
-        <a><input type="submit" value="Place Order"></a>
+        <a><input type="button" onClick="display()" value="Place Order"></a>
     </form>
 
+</body>
     <script>
-        function clickAlert() {
-            confirm("Alert!");
+        function display() {
+            if(document.getElementById(1).checked) {
+                alert('1');
+            }
+            else if(document.getElementById(2).checked) {
+                alert('2');
+            }
         }
     </script>
-</body>
 </html>
