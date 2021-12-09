@@ -56,7 +56,12 @@
         <?php
         foreach ($locations as $location) :?>
           <tr class="location_row">
-                <td><h2><?php echo $location['name']; ?></h2></td>
+                <td>
+                    <form action="cart.php" method="post">
+                        <a><input type="hidden" name="pickUpLocation" value="<?php echo $location['id']?>"></a>
+                        <a><input type="submit" name="update" value="<?php echo $location['name']; ?>"></a>
+                    </form>
+                </td>
                 <tr>
                     <td><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?></td>
                 </tr>
