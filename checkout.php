@@ -65,16 +65,12 @@
             </tr>
           </tr>
           <?php endforeach;?>
+          <input type="Submit" name="submit" value="Place Order"></a>
       </form>
     </table>
     <br>
-    <form action="debug.php" method="post">
-        <a><input type="button" onClick="display()" value="Place Order"></a>
-    </form>
-
-</body>
-    <script>
-        function display() {
+    <?php
+        if(isset($Post['submit'])) {
             if(document.getElementById(1).checked) {
                 alert('1');
             }
@@ -82,5 +78,7 @@
                 alert('2');
             }
         }
-    </script>
+    ?>
+
+</body>
 </html>
