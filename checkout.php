@@ -99,7 +99,8 @@
             $selectedLocation = 0;
             if(document.getElementById(1).checked) {
                 $selectedLocation = 1;
-            } else if(document.getElementById(2).checked) {
+            }
+            else if(document.getElementById(2).checked) {
                 $selectedLocation = 2;
             }
 
