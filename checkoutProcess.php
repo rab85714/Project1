@@ -48,11 +48,17 @@
             $location = $locationPrep->execute();
 
             print "location query : " . $location . "<br>";
+        } else {
+            alret("Something went wrong, Please try again.");
+            header('location: checkout.php');
         }
 
         if (isset($_POST['radioPayment'])) {
             $paymentName = $_POST['radioPayment'];
             print "payment: " . $paymentName . "<br>";
+        } else {
+            alret("Something went wrong, Please try again.");
+            header('location: checkout.php');
         }
     ?>
     <br>
