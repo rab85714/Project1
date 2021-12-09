@@ -49,7 +49,7 @@
             print "location query : " . $location . "<br>";
         } else {
             echo ("<script LANGUAGE='JavaScript'>
-                window.alert('Something went wrong, Please try again.');
+                confirm('Something went wrong, Please try again.');
                 window.location.href='checkout.php';
                 </script>");
         }
