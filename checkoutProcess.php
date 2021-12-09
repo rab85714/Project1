@@ -11,6 +11,8 @@
                     WHERE user.email = '$email' AND user.id = cart.id AND cart.itemId = menuitem.id";
 
   $cart = $db->query($queryCart);
+
+  $total = 0;
 ?>
 
 <!DOCTYPE html>
