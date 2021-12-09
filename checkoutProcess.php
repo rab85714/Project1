@@ -33,7 +33,7 @@
             $locationId = ($_POST['radioLocation'] + 0);
             print "location: " . ($locationId * 1) . "<br>";
 
-            $locationQuery = "SELECT
+            $locationQuery = "SELECT ALL
                 locations.name,
                 locations.streetNumber,
                 locations.streetName,
