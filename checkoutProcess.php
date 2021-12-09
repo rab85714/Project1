@@ -13,6 +13,8 @@
   $cart = $db->query($queryCart);
 
   $total = 0;
+  $locationId = 0;
+  $paymentName = "";
 ?>
 
 <!DOCTYPE html>
