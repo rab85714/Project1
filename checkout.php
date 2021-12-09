@@ -55,7 +55,6 @@
       <form action="debug.php" method="post">
         <?php
         foreach ($locations as $location) :?>
-          <br>
           <tr class="location_row">
             <td>
                 <input type="radio" name="radioLocation" id="<?php echo $location['id']?>">
