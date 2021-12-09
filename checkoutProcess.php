@@ -34,12 +34,12 @@
             $locationId = $_POST['radioLocation'];
             print "location: " . ($locationId * 1) . "<br>";
 
-            $locationQuery = 'SELECT * FROM locations WHERE id = :locationId';
+            $locationQuery = "SELECT * FROM locations WHERE id = $locationId";
             $locationPrep = $db->prepare($locationQuery);
-            $locationPrep->bindParam(':locationId', $locationId, PDO::PARAM_INT);
-            print "mid query location id: " . $locationId . (':locationId') . "<br>";
+            //$locationPrep->bindParam(':locationId', $locationId, PDO::PARAM_INT);
+            print "mid query location id: " . $locationId . "<br>";
             $location = $locationPrep->execute();
-
+           
             print "location query : " . $location . "<br>";
         }
 
