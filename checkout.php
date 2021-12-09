@@ -70,7 +70,8 @@
 
         </table>
         <?php if (action == "successMessage"){
-            "<script>alert("Welcome to Geeks for Geeks")</script>"
+            "<script>alert("hi")</script>"
         }
+        ?>
 </body>
 </html>
