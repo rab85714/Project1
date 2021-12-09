@@ -65,10 +65,20 @@
             </tr>
           </tr>
           <?php endforeach;?>
-          <input type="Submit" name="submit" value="Place Order"></a>
+          <input type="button" onClick="display()" value="Place Order"></a>
       </form>
     </table>
     <br>
 
 </body>
+    <script>
+        function display() {
+            if(document.getElementById(1).checked) {
+                alert('1');
+            }
+            else if(document.getElementById(2).checked) {
+                alert('2');
+            }
+        }
+    </script>
 </html>
