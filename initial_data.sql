@@ -32,11 +32,12 @@ CREATE TABLE IF NOT EXISTS cart (
 
 CREATE TABLE IF NOT EXISTS orderhistory (
  id int(11) NOT NULL,
- itemId int(11) NOT NULL,
+ cartTotal int(11) NOT NULL,
+ locationName varchar(255) NOT NULL,
  dop varchar(255) NOT NULL,
- PRIMARY KEY(id),
  FOREIGN KEY(id) references user(id),
- FOREIGN KEY(itemId) references menuItem(id)
+ FOREIGN KEY(itemId) references menuItem(id),
+ FOREIGN KEY(locationName) references locations(name)
 );
 
 CREATE TABLE IF NOT EXISTS locations (
