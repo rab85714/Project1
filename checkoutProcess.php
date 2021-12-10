@@ -58,11 +58,11 @@
         }
 
         $total = 0;
-        $locationId = 0;
+        $locationName = "";
         $paymentName = "";
 
         if (isset($_POST['radioLocation'])) {
-            $locationId = ($_POST['radioLocation'] + 0);
+            $locationName = ($_POST['radioLocation']);
         } else {
             echo ("<script LANGUAGE='JavaScript'>
                 window.alert('Please select a location and a payment method.');
@@ -100,7 +100,7 @@
     <p><?php echo "Payment Method: " . $paymentName . " (in store)"; ?>
     <br>
     <?php foreach ($locations as $location):?>
-        <?php if ($location['id'] == $locationId) { ?>
+        <?php if ($location['name'] == $locationName) { ?>
         <p><?php echo $location['name']; ?></p><br>
         <p><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?>
         <?php } ?>

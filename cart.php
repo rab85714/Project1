@@ -87,7 +87,7 @@
     <br>
     <form action="checkout.php" method="post">
         <a><?php echo "Total: $" . $total; ?></a>
-        <a><input type="submit" name="checkout" value="Checkout"></a>
+        <a><input type="submit" name="checkout" value="Place Order"></a>
     </form>
   </div>
 

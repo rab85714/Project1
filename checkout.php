@@ -58,7 +58,7 @@
         <?php foreach ($locations as $location) :?>
             <tr class="location_row">
                 <td>
-                    <input type="radio" name="radioLocation" value="<?php echo $location['id']?>">
+                    <input type="radio" name="radioLocation" value="<?php echo $location['name']?>">
                     <label> <?php echo $location['name']; ?> </label>
                 </td>
             <tr>
@@ -87,7 +87,7 @@
             </td>
         </tr>
         <tr><td>
-            <input type="submit" name="submitCheckout" value="Place Order">
+            <input type="submit" name="submitCheckout" value="Proceed To Checkout">
         </tr></td>
       </form>
     </table>
