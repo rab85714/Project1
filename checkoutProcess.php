@@ -105,8 +105,10 @@
         <p><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?>
         <?php } ?>
     <?php endforeach; ?>
-    <form action="checkout.php" method="post">
+    <form action="addToOrderHistory.php" method="post">
         <a><?php echo "Total: $" . $total; ?></a>
+        <a><input type="hidden" name="cartTotal" value="<?php $total ?>"></a>
+        <a><input type="hidden" name="locationName" value="<?php $location['name'] ?>"></a>
         <a><input type="submit" name="checkout" value="Checkout"></a>
     </form>
 </body>
