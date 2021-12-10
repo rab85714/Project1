@@ -35,8 +35,7 @@ CREATE TABLE IF NOT EXISTS orderhistory (
  cartTotal int(11) NOT NULL,
  locationName varchar(255) NOT NULL,
  dop varchar(255) NOT NULL,
- FOREIGN KEY(id) references user(id),
- FOREIGN KEY(locationName) references locations(name)
+ FOREIGN KEY(id) references user(id)
 );
 
 CREATE TABLE IF NOT EXISTS locations (
