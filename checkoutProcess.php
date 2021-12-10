@@ -9,7 +9,9 @@
 
   $queryCart = "SELECT user.id, cart.itemId, cart.quantity, menuitem.name, menuitem.price FROM cart, user, menuitem
                     WHERE user.email = '$email' AND user.id = cart.id AND cart.itemId = menuitem.id";
+  $queryLocations = "SELECT * FROM locations";
 
+  $locations = $db->query($queryLocations);
   $cart = $db->query($queryCart);
 ?>
 
@@ -31,15 +33,6 @@
 
         if (isset($_POST['radioLocation'])) {
             $locationId = ($_POST['radioLocation'] + 0);
-            print "location: " . ($locationId * 1) . "<br>";
-
-            $locationQuery = "SELECT *
-                FROM locations";
-            $locationPrep = $db->prepare($locationQuery);
-            //$locationPrep->bindValue(':locationId', $locationId, PDO::PARAM_INT);
-            $location = $locationPrep->execute();
-
-            print "location query : " . $location . "<br>";
         } else {
             echo ("<script LANGUAGE='JavaScript'>
                 window.alert('Please select a location and a payment method.');
@@ -49,7 +42,6 @@
 
         if (isset($_POST['radioPayment'])) {
             $paymentName = $_POST['radioPayment'];
-            print "payment: " . $paymentName . "<br>";
         } else {
             echo ("<script LANGUAGE='JavaScript'>
                 window.alert('Please select a location and a payment method.');
@@ -77,10 +69,12 @@
     <p><?php echo "Total: $" . $total;?></p><br>
     <p><?php echo "Payment Method: " . $paymentName . " (in store)"; ?>
     <br>
-
-    <p><?php echo $location['name']; ?></p><br>
-    <p><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?>
-
+    <?php foreach ($locations as $location):?>
+        <?php if ($location['id'] == $locationId) { ?>
+        <p><?php echo $location['name']; ?></p><br>
+        <p><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?>
+        <?php } ?>
+    <?php endforeach; ?>
     <form action="checkout.php" method="post">
         <a><?php echo "Total: $" . $total; ?></a>
         <a><input type="submit" name="checkout" value="Checkout"></a>
