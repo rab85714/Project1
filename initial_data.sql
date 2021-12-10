@@ -36,7 +36,6 @@ CREATE TABLE IF NOT EXISTS orderhistory (
  locationName varchar(255) NOT NULL,
  dop varchar(255) NOT NULL,
  FOREIGN KEY(id) references user(id),
- FOREIGN KEY(itemId) references menuItem(id),
  FOREIGN KEY(locationName) references locations(name)
 );
 
