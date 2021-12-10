@@ -16,8 +16,10 @@
     <?php
         if (isset($_POST['checkout'])) {
             $cartTotalRaw = filter_input(INPUT_POST, 'cartTotal');
+            print "cartTotal: " . $cartTotalRaw . "<br>";
             $cartTotal = "$" . $CartTotalRaw[0];
             $locationNameRaw = filter_input(INPUT_POST, 'locationName');
+            print "locationName: " . $locationNameRaw . "<br>";
             $locationName = $locationNameRaw[0];
             $email = $_SESSION['email'];
 
