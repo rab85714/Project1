@@ -23,7 +23,7 @@
         if(isset($_POST['cart'])) {
             $locationName = $_POST['cart'];
         } else {
-            $locationName = "sadness"
+            $locationName = "sadness";
         }
         print "total: " . $cartTotal . "<br>";
         print "loc: " . $locationName . "<br>";
