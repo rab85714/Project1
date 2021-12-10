@@ -15,12 +15,14 @@
 <body>
 <?php
     if (isset($_POST['checkout'])) {
-        $cartTotalRaw = filter_input(INPUT_POST, 'cartTotal');
-        print "cartTotal: " . $cartTotalRaw . "<br>";
-        $cartTotal = "$" . $cartTotalRaw[0];
-        $locationNameRaw = filter_input(INPUT_POST, 'locationName');
-        print "locationName: " . $locationNameRaw . "<br>";
-        $locationName = $locationNameRaw[0];
+        if(isset($_POST['cartTotal']){
+            $cartTotal = "$" . $_POST['cartTotal'];
+        }
+        if(isset($_POST['cart'])) {
+            $locationName = $_POST['cart'];
+        }
+        print "total: " . $cartTotal . "<br>";
+        print "loc: " . $locationName . "<br>";
         $email = $_SESSION['email'];
 
         $userQuery = "SELECT * FROM user WHERE email = :email";
