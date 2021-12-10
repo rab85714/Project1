@@ -15,7 +15,7 @@
 <body>
 <?php
     if (isset($_POST['checkout'])) {
-        if(isset($_POST['cartTotal']){
+        if(isset($_POST['cartTotal'])){
             $cartTotal = "$" . $_POST['cartTotal'];
         }
         if(isset($_POST['cart'])) {
