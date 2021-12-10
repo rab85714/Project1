@@ -33,16 +33,10 @@
             $locationId = ($_POST['radioLocation'] + 0);
             print "location: " . ($locationId * 1) . "<br>";
 
-            $locationQuery = "SELECT ALL
-                locations.name,
-                locations.streetNumber,
-                locations.streetName,
-                locations.city,
-                locations.state,
-                locations.zipCode
-                FROM locations WHERE id = :locationId";
+            $locationQuery = "SELECT *
+                FROM locations";
             $locationPrep = $db->prepare($locationQuery);
-            $locationPrep->bindValue(':locationId', $locationId, PDO::PARAM_INT);
+            //$locationPrep->bindValue(':locationId', $locationId, PDO::PARAM_INT);
             $location = $locationPrep->execute();
 
             print "location query : " . $location . "<br>";
