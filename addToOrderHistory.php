@@ -45,7 +45,7 @@
         $AddToOrderHistory->bindParam(':locationName', $locationName, PDO::PARAM_SRT);
         $result = $AddToOrderHistory->execute(); */
 
-        header('location: cart.php');
+        //header('location: cart.php');
     }
 ?>
 
