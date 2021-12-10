@@ -18,7 +18,7 @@
         if(isset($_POST['cartTotal'])){
             $cartTotal = "$" . $_POST['cartTotal'];
         } else {
-            $cartTotal = ":( <br>";
+            $cartTotal = "booo <br>";
         }
         if(isset($_POST['cart'])) {
             $locationName = $_POST['cart'];
