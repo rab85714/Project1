@@ -17,13 +17,9 @@
     if (isset($_POST['checkout'])) {
         if(isset($_POST['cartTotal'])){
             $cartTotal = "$" . $_POST['cartTotal'];
-        } else {
-            $cartTotal = "booo <br>";
         }
-        if(isset($_POST['cart'])) {
-            $locationName = $_POST['cart'];
-        } else {
-            $locationName = "sadness";
+        if(isset($_POST['locationName'])) {
+            $locationName = $_POST['locationName'];
         }
         print "total: " . $cartTotal . "<br>";
         print "loc: " . $locationName . "<br>";
