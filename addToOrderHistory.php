@@ -22,7 +22,7 @@
             $locationName = $_POST['locationName'];
         }
         print "total: " . $cartTotal . "<br>";
-        print "loc: " . $locationName . "<br>";
+        print "loc: " . ( $locationName + 1 ) . "<br>";
         $email = $_SESSION['email'];
 
         $userQuery = "SELECT * FROM user WHERE email = :email";
@@ -32,14 +32,14 @@
 
         $date = date('l jS \of F Y');
 
-        /* $queryAddToOrderHistory = "INSERT INTO orderhistory VALUES
+        $queryAddToOrderHistory = "INSERT INTO orderhistory VALUES
             (:cartTotal, :dop, :id, :locationName)";
         $AddToOrderHistory = $db->prepare($queryAddToOrderHistory);
         $AddToOrderHistory->bindParam(':cartTotal', $cartTotal, PDO::PARAM_STR);
         $AddToOrderHistory->bindParam(':dop', $date, PDO::PARAM_STR);
         $AddToOrderHistory->bindParam(':id', $userId, PDO::PARAM_INT);
         $AddToOrderHistory->bindParam(':locationName', $locationName, PDO::PARAM_SRT);
-        $result = $AddToOrderHistory->execute(); */
+        $result = $AddToOrderHistory->execute();
 
         header('location: cart.php');
     }
