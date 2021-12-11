@@ -35,7 +35,7 @@
         print "date: " . $date . "<br>";
 
         $queryAddToOrderHistory = "INSERT INTO orderhistory VALUES
-            (:id, cartTotal, :locationName, dop)";
+            (:id, :cartTotal, :locationName, :dop)";
         $AddToOrderHistory = $db->prepare($queryAddToOrderHistory);
         $AddToOrderHistory->bindParam(':id', $userId, PDO::PARAM_INT);
         $AddToOrderHistory->bindParam(':cartTotal', $cartTotal, PDO::PARAM_STR);
