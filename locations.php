@@ -1,6 +1,9 @@
 <?php
-  require('database.php');
-  session_start();
+      require('database.php');
+      session_start();
+
+      $queryLocations = "SELECT * FROM locations";
+      $locations = $db->query($queryLocations);
 ?>
 
 <!DOCTYPE html>
@@ -38,18 +41,12 @@
 
 	</div>
 
-      <div style="padding-bottom:20px">
-          Athens Location <br>
-          <address>123 Muffin Man Way <br>
-          Athens, GA 30601 </address>
-      </div>
-
-
-      <div style="padding-bottom:20px">
-        Atlanta Location <br>
-        <address> 456 Another Street <br>
-        Atlanta, GA 32098 </address>
-      </div>
+      <?php foreach ($locations as $location):?>
+        <div>
+          <p><?php echo $location['name']; ?></p><br>
+          <p><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?>
+        </div>
+      <?php endforeach; ?>
 
       <footer>
       	<nav id="socials">
