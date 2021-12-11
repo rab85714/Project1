@@ -63,6 +63,7 @@
                     <a><?php echo $order['dop']; ?></a>
                 </td>
             </tr>
+        <?php endforeach;?>
     </table>
 </body>
 </html>
