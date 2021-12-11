@@ -29,8 +29,10 @@
         $userPrep = $db->prepare($userQuery);
         $userPrep->bindParam(':email', $email, PDO::PARAM_STR);
         $userId = $userPrep->execute();
+        print "id: " . $userId . "<br>";
 
         $date = date('l jS \of F Y');
+        print "date: " . $date . "<br>";
 
         $queryAddToOrderHistory = "INSERT INTO orderhistory VALUES
             (:cartTotal, :dop, :id, :locationName)";
