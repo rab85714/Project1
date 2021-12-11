@@ -51,6 +51,9 @@
   </nav>
 </header>
 <body>
+  <div>
+    <a class="link" href = "orderHistory.php"> View Order History </a>
+  </div>
   <div class="grid-container">
     <table>
       <tr>
