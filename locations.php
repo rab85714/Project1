@@ -36,17 +36,17 @@
         </nav>
       </header>
 
-      <div style="padding-bottom:20px">
+    <div style="padding-bottom:20px">
 
 
 	</div>
-
-      <?php foreach ($locations as $location):?>
-        <div>
-          <p><?php echo $location['name']; ?></p><br>
-          <p><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode']; ?>
-        </div>
-      <?php endforeach; ?>
+      <table>
+          <?php foreach ($locations as $location):?>
+              <a><?php echo $location['name'] . "<br>"; ?></a>
+              <a><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode'] . "<br>"; ?></a>
+              <br>
+          <?php endforeach; ?>
+      </table>
 
       <footer>
       	<nav id="socials">
