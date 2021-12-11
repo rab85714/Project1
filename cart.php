@@ -48,12 +48,10 @@
     <a class="link" href = "locations.php"> Locations </a>
     <a class="link" href = "cart.php"> My Cart </a>
     <a class="link" href="logout.php"> Logout </a>
+    <a class="link" href = "orderHistory.php"> View Order History </a>
   </nav>
 </header>
 <body>
-  <div>
-    <a class="link" href = "orderHistory.php"> View Order History </a>
-  </div>
   <div class="grid-container">
     <table>
       <tr>
