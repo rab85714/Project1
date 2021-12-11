@@ -48,7 +48,7 @@
         $DeleteFromCart->bindParam(':id', $userId, PDO::PARAM_INT);
         $DeleteFromCart->execute();
 
-        header('location: cart.php');
+        header('location: orderHistory.php');
     }
 ?>
 
