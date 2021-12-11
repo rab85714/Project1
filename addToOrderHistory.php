@@ -22,7 +22,7 @@
             $locationName = $_POST['locationName'];
         }
         print "total: " . $cartTotal . "<br>";
-        print "loc: " . ( $locationName + 1 ) . "<br>";
+        print "loc: " . $locationName  . "<br>";
         $email = $_SESSION['email'];
 
         $userQuery = "SELECT * FROM user WHERE email = :email";
