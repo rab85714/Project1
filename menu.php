@@ -3,22 +3,18 @@
   session_start();
 
   $queryMenu = 'SELECT * FROM menuItem';
-  $queryItemCount = 'SELECT COUNT(name) FROM menuItem';
 
-  $itemNames = $db->query($queryMenu);
-  $itemPrices = $db->query($queryMenu);
-  $itemDescriptions = $db->query($queryMenu);
-  $itemButtons = $db->query($queryMenu);
-  $numItems = $db->query($queryItemCount);
+  $items = $db->query($queryMenu);
  ?>
 
  <!DOCTYPE html>
 
  <html>
      <head>
-         <title>Restaurant</title>
-         <link rel="stylesheet" href="index.css">
- 	       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <title>Restaurant</title>
+        <link rel="stylesheet" href="menuItems.css">
+        <link rel="stylesheet" href="index.css">
+ 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
      </head>
 
      <body class="container-fluid">
@@ -45,35 +41,25 @@
 
        <div>
          <h2 class="entres_title"> Entres </h2>
-         <table>
-           <tr>
-             <?php foreach ($itemNames as $item): ?>
-               <td><a><?php echo $item['name']?></a></td>
-             <?php endforeach; ?>
-           </tr>
-
-           <tr>
-             <?php foreach ($itemPrices as $item): ?>
-               <td><a><?php echo $item['price']?></a></td>
-             <?php endforeach; ?>
-           </tr>
-
-           <tr>
-             <?php foreach ($itemDescriptions as $item): ?>
-               <td><a><?php echo $item['description']?></a></td>
-             <?php endforeach; ?>
-           </tr>
-
-           <tr>
-             <?php foreach($itemButtons as $item): ?>
-                <td>
-                  <form action="addToCart.php" method="post">
-                    <a><input type="hidden" name="itemId" value="<?php echo $item['id']?>"></a>
-                    <a><input type="submit" name="add" value="Add To Cart"></a>
-                  </form>
-                </td>
-             <?php endforeach; ?>
-           </tr>
+         <div class="grid-container">
+            <?php $count = 0 ?>
+            <?php foreach ($items as $item): ?>
+                <div class="container">
+                    <?php $count = $count + 1; ?>
+                    <p><?php echo $item['name']?></p>
+                    <p><?php echo $item['price']?></p>
+                    <p><?php echo $item['description']?></p>
+                    <form action="addToCart.php" method="post" class="form-center">
+                        <a><input type="hidden" name="itemId" value="<?php echo $item['id']?>"></a>
+                        <a><input type="submit" name="add" value="Add To Cart"></a>
+                    </form>
+                </div>
+                <p> <?php echo "mod count: " . ($count%4) ?> </p>
+                <?php if ($count%4 == 0){?>
+                    <br>
+                <?php }?>
+            <?php endforeach; ?>
+         </div>
        </div>
 
        <footer>

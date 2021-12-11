@@ -1,0 +1,16 @@
+.grid-container {
+    grid-template-columns: auto auto auto;
+}
+
+.container {
+    border: #777 1px solid;
+}
+
+p {
+    text-align: center;
+}
+
+.form-center {
+    text-align: center;
+    justify-content: center;
+}
