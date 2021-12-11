@@ -41,7 +41,12 @@
         $AddToOrderHistory->bindParam(':cartTotal', $cartTotal, PDO::PARAM_STR);
         $AddToOrderHistory->bindParam(':locationName', $locationName, PDO::PARAM_STR);
         $AddToOrderHistory->bindParam(':dop', $date, PDO::PARAM_STR);
-        $result = $AddToOrderHistory->execute();
+        $AddToOrderHistory->execute();
+
+        $queryDeleteFromCart = "DELETE FROM cart WHERE id = :id";
+        $DeleteFromCart = $db->prepare($queryDeleteFromCart);
+        $DeleteFromCart->bindParam(':id', $userId, PDO::PARAM_INT);
+        $DeleteFromCart->execute();
 
         header('location: cart.php');
     }
