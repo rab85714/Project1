@@ -37,10 +37,10 @@
         $queryAddToOrderHistory = "INSERT INTO orderhistory VALUES
             (:id, cartTotal, :locationName, dop)";
         $AddToOrderHistory = $db->prepare($queryAddToOrderHistory);
-        $AddToOrderHistory->bindParam(':cartTotal', $cartTotal, PDO::PARAM_STR);
-        $AddToOrderHistory->bindParam(':dop', $date, PDO::PARAM_STR);
         $AddToOrderHistory->bindParam(':id', $userId, PDO::PARAM_INT);
+        $AddToOrderHistory->bindParam(':cartTotal', $cartTotal, PDO::PARAM_STR);
         $AddToOrderHistory->bindParam(':locationName', $locationName, PDO::PARAM_STR);
+        $AddToOrderHistory->bindParam(':dop', $date, PDO::PARAM_STR);
         $result = $AddToOrderHistory->execute();
 
         header('location: cart.php');
