@@ -44,8 +44,8 @@
     <table class="cart-table">
       <tr>
          <th> Name </th>
+         <th> Quantity </th>
          <th> Price </th>
-         <th> delete button </th>
       </tr>
     <?php
     $total = 0;
@@ -53,10 +53,10 @@
       <tr class="item-row">
             <td> <?php echo $item['name']; ?></td>
             <td>
-                <form action="updateQuantity.php" method="post">
-                    <a><input type="number" name="quantity" value = "<?php echo $item['quantity'] ?>" min = 1 max = 10></a>
-                    <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
-                    <a><input type="submit" name="update" value="Update Quantity"></a>
+                <form class="update-form" action="updateQuantity.php" method="post">
+                    <a><input type="number" name="quantity" value = "<?php echo $item['quantity'] ?>" min = 1 max = 10></a><br>
+                    <input type="hidden" name="itemId" value="<?php echo $item['itemId']?>">
+                    <a><input class="update-button" type="submit" name="update" value="Update Quantity"></a>
                 </form>
             </td>
             <?php $itemTotal = $item['price'] * $item['quantity']; ?>

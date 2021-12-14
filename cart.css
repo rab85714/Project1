@@ -3,6 +3,14 @@
 
 }
 
+.update-button {
+    font-size: 12px;
+}
+
+.update-form {
+    text-align: center;
+}
+
 .cart-table {
     margin: auto;
     width: 80%;
