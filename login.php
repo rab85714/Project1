@@ -33,10 +33,10 @@
           <br>
         <div>
           <div><input id="submitButton" onclick="myFunction()" type="submit" value="Login" name = "Login"></div>
-          <form action="./index.php"><input type="submit" value="Continue as Guest"></form>
           <br>
         </div>
         </form>
+        <form action="./index.php"><input type="submit" value="Continue as Guest"></form>
 
         <p id=demo></p>
 
