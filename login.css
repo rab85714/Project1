@@ -1,0 +1,23 @@
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+form h1 {
+  margin-top: 50px;
+}
+
+#loginBox {
+  border-radius: 25px;
+  border: 2px solid #black;
+  padding: 20px;
+  width: 50%;
+  height: 400px;
+  text-align:center;
+  background-image: url('flag.jpeg');
+  padding: 10px;
+  margin:auto;
+  box-shadow: 10px 10px 10px 10px lightgray;
+  background-size: cover;
+}
