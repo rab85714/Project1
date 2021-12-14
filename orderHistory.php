@@ -23,7 +23,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>My Cart</title>
+  <title>Mario's Bistro</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <style>
@@ -54,7 +54,7 @@
   </nav>
 </header>
 <body>
-  <br>
+  <h1 style="text-align:center"> Order History </h1>
     <table>
         <?php foreach ($orderHistory as $order) :?>
             <tr>

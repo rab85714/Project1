@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Restaurant</title>
+        <title>Mario's Bistro</title>
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="locations.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -37,10 +37,7 @@
         </nav>
       </header>
 
-    <div style="padding-bottom:20px">
-
-
-	</div>
+  <h1 style="text-align:center"> Our Locations </h1>
       <table>
           <?php foreach ($locations as $location):?>
               <a class="locationNameTitle"><?php echo $location['name'] . "<br>"; ?></a>
