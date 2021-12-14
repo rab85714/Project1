@@ -1,9 +1,14 @@
 .grid-container {
+    display: grid;
     grid-template-columns: auto auto auto;
+    margin: 20px;
 }
 
-.container {
-    border: #777 1px solid;
+.item-box {
+    margin: 10px;
+    border: #777 10px solid;
+    border-style: groove;
+    border-radius: 10px;
 }
 
 p {
@@ -16,6 +21,6 @@ p {
 }
 
 .menuItemTitles {
-  font-size: 25px;
-  font-weight: bold;
+    font-size: 25px;
+    font-weight: bold;
 }
