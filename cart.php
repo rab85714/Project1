@@ -71,6 +71,7 @@
     <br>
     <form action="checkout.php" method="post">
         <a><?php echo "Total: $" . $total; ?></a>
+        <a><input type="hidden" name="total" value="<?php echo $total?>"></a>
         <a><input type="submit" name="checkout" value="Place Order"></a>
     </form>
   </div>

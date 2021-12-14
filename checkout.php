@@ -7,6 +7,14 @@
     header("location: login.php");
   }
 
+  if (isset($_POST['checkout'])) {
+      $totalRaw = filter_input(INPUT_POST, 'total');
+      $total = $totalRaw[0];
+      if($total == 0){
+        header("location: cart.php");
+      }
+  }
+
   $queryLocations = "SELECT * FROM locations";
   $locations = $db->query($queryLocations);
 ?>
