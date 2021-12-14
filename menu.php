@@ -38,6 +38,8 @@
            <a class="link" href=<?php echo $phpPage ?>>  <?php echo $isLoggedIn ?> </a>
          </nav>
        </header>
+       <br>
+       <h2 style="text-align:center"> My Cart </h2>
 
        <div>
          <div class="grid-container">

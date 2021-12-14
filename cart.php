@@ -40,6 +40,9 @@
   <div class="title">
     <h2> Cart </h2>
   </div>
+  <div>
+      <form id="continueShoppingButton" action="./menu.php"><input type="submit" value="Continue Shopping"></form>
+</div>
   <div class="grid-container">
     <table class="cart-table">
       <tr>
@@ -76,7 +79,7 @@
     <form class="place-order" action="checkout.php" method="post">
         <a><?php echo "Total: $" . $total; ?></a>
         <a><input type="hidden" name="total" value="<?php echo $total?>"></a>
-        <a><input type="submit" name="checkout" value="Place Order"></a>
+        <a><input id="placeOrderButton" type="submit" name="checkout" value="Place Order"></a>
     </form>
   </div>
 
