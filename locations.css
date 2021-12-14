@@ -2,3 +2,11 @@
   font-size: 25px;
   font-weight: bold;
 }
+
+img {
+    float: left;
+    width:  300px;
+    height: 300px;
+    border-style: solid;
+    object-fit: cover;
+}
