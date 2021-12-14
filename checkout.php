@@ -115,10 +115,10 @@
 <script>
 // When the user clicks on div, open the popup
 function displayEmail() {
-  alert("contactus@mariosbistro.org");
+  alert("Email us at contactus@mariosbistro.org!");
 }
 
 function displayPhoneNumber() {
-  alert("111-222-3333");
+  alert(" Call us at 111-222-3333!");
 }
 </script>
