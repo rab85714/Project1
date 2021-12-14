@@ -3,22 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>Mario's Bistro Login</title>
+  <link rel="stylesheet" href="login.css">
   <style>
-    body {
-      background: #E5E5E5;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    form h1 {
-      margin-top: 50px;
-    }
+
 
   </style>
 </head>
 <body>
-  <div>
-    <div>
+  <br>
+    <div id="loginBox">
       <form action='loginProcess.php' method='post'>
         <h1>Welcome to Mario's Bistro!</h1>
         <h3>Log In</h3>
@@ -41,7 +34,6 @@
         <p id=demo></p>
 
     </div>
-  </div>
 
 <script>
 function myFunction() {
