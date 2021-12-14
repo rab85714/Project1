@@ -6,9 +6,10 @@
 
 .item-box {
     margin: 10px;
-    border: #777 10px solid;
+    border: 10px solid white;
     border-style: groove;
     border-radius: 10px;
+    background-color: #f4ece2;
 }
 
 p {

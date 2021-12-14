@@ -41,7 +41,7 @@
        <br>
        <h2 style="text-align:center"> My Cart </h2>
 
-       <div>
+       <div class="main">
          <div class="grid-container">
             <?php $count = 0 ?>
             <?php foreach ($items as $item): ?>
