@@ -1,0 +1,31 @@
+.grid-container {
+    padding: 10px;
+
+}
+
+.cart-table {
+    margin: auto;
+    width: 80%;
+}
+
+.price {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.item-row {
+    border: 1px solid black;
+
+}
+
+.place-order {
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+}
+
