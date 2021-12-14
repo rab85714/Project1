@@ -33,6 +33,8 @@
           <br>
         <div>
           <div><input id="submitButton" onclick="myFunction()" type="submit" value="Login" name = "Login"></div>
+          <div><input id="continueAsGuest" type="submit" value="Continue as Guest" name="ContinueAsGuest"></div>
+          <form action="./index.php"><input type="submit" value="Continue as Guest"></form>
           <br>
         </div>
         </form>
