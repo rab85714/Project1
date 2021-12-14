@@ -54,6 +54,7 @@
   </nav>
 </header>
 <body>
+  <br>
     <table>
         <?php foreach ($orderHistory as $order) :?>
             <tr>
@@ -65,5 +66,13 @@
             </tr>
         <?php endforeach;?>
     </table>
+    <br>
+    <footer>
+     <nav id="socials">
+       <a style="color: white"> Contact Us Here: </a>
+       <a class="link" href = "" target="_blank"> Email </a>
+       <a class="link" href = "" target="_blank"> Phone Number </a>
+     </nav>
+    </footer>
 </body>
 </html>

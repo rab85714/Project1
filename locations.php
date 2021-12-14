@@ -11,6 +11,7 @@
     <head>
         <title>Restaurant</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="locations.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     </head>
 
@@ -42,8 +43,9 @@
 	</div>
       <table>
           <?php foreach ($locations as $location):?>
-              <a><?php echo $location['name'] . "<br>"; ?></a>
-              <a><?php echo $location['streetNumber'] . " " . $location['streetName'] . ", " . $location['city'] . ", " . $location['state'] . " " . $location['zipCode'] . "<br>"; ?></a>
+              <a class="locationNameTitle"><?php echo $location['name'] . "<br>"; ?></a>
+              <a><?php echo $location['streetNumber'] . " " . $location['streetName'] . ",<br>"; ?></a>
+              <a><?php echo $location['city'] . ", " . $location['state'] . " " . $location['zipCode'] . "<br>"; ?></a>
               <br>
           <?php endforeach; ?>
       </table>

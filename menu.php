@@ -40,13 +40,12 @@
        </header>
 
        <div>
-         <h2 class="entres_title"> Entres </h2>
          <div class="grid-container">
             <?php $count = 0 ?>
             <?php foreach ($items as $item): ?>
                 <div class="container">
                     <?php $count = $count + 1; ?>
-                    <p><?php echo $item['name']?></p>
+                    <p class="menuItemTitles"><?php echo $item['name']?></p>
                     <p><?php echo $item['price']?></p>
                     <p><?php echo $item['description']?></p>
                     <form action="addToCart.php" method="post" class="form-center">

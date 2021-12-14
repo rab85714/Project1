@@ -45,11 +45,6 @@ footer {
   margin-bottom: 10px;
 }
 
-#myPic {
-  margin: 10px;
-  width: 50%;
-}
-
 div {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -73,36 +68,6 @@ div {
   color: white;
 }
 
-#coursework {
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border: 1px dotted gray;
-}
-#coursework td, #coursework th {
-  border: 1px dotted gray;
-  padding: 3px;
-}
-#coursework th {
-  background-color: lightgray;
-}
-
-.schooling {
-  font-size: 17px;
-  color:black;
-}
-
-a.schooling:hover{
-  color: blue;
-}
-
-.educationHeading {
-  margin-left: 30px;
-}
-
-.ed {
-  margin-left: 50px;
-}
-
 .homepage {
   text-align: center;
 }
@@ -111,35 +76,14 @@ a.schooling:hover{
   margin: 10px;
 }
 
-#disclaimer {
-  font-size: 12px;
-}
-
-.lacrossePicture, .miraclePic {
-  width: 250px;
-  margin: 10px;
-}
-
-.KDPicture {
-  width: 40%;
-}
-
 span {
   vertical-align: top;
   padding-left: 20px;
 }
 
-.miraclePic {
-  margin-bottom: 20px;
-}
-
 h3 {
   padding-bottom: 10px;
   color: #077B88;
-}
-
-address {
-  font-style: italic;
 }
 
 .column {
@@ -152,4 +96,5 @@ address {
   clear: both;
   display: table;
 }
+
 /*# sourceMappingURL=index.css.map */
