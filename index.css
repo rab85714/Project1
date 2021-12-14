@@ -1,5 +1,6 @@
-body {
-  background-color: tan;
+.main {
+  background-image: url("backgroundCloth.jpg");
+  border-top: 5px solid white;
 }
 
 header {
@@ -61,7 +62,8 @@ div {
 }
 
 .link {
-  color: white;
+  color: #f4ece2;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .link:hover {
@@ -91,10 +93,18 @@ h3 {
   width: 33%;
   padding: 5px;
 }
+
 .row::after {
   content: "";
   clear: both;
   display: table;
+}
+
+img {
+    float: left;
+    width:  100px;
+    height: 300px;
+    object-fit: cover;
 }
 
 /*# sourceMappingURL=index.css.map */
