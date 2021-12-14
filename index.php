@@ -68,10 +68,21 @@ img {
 <footer>
 	<nav id="socials">
 	  <a style="color: white"> Contact Us Here: </a>
-	  <a class="link" href = "" target="_blank"> Email </a>
-	  <a class="link" href = "" target="_blank"> Phone Number </a>
+	  <a onclick="displayEmail()" class="link" href=""> Email </a>
+	  <a onclick="displayPhoneNumber()" class="link" href=""> Phone Number </a>
 	</nav>
 </footer>
 
     </body>
 </html>
+
+<script>
+// When the user clicks on div, open the popup
+function displayEmail() {
+  alert("contactus@mariosbistro.org");
+}
+
+function displayPhoneNumber() {
+  alert("111-222-3333");
+}
+</script>
