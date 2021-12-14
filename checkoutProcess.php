@@ -108,7 +108,15 @@
         <a><?php echo "Total: $" . $total; ?></a>
         <a><input type="hidden" name="cartTotal" value="<?php echo $total ?>"></a>
         <a><input type="hidden" name="locationName" value="<?php echo $locationName ?>"></a>
-        <a><input type="submit" name="checkout" value="Checkout"></a>
+        <a><input onclick="foo()" type="submit" name="checkout" value="Checkout"></a>
     </form>
+
+
+    <script>
+function foo() {
+    alert("Checkout Successful!");
+    window.location.href = "./menu.php";
+  }
+    </script>
 </body>
 </html>
