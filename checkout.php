@@ -27,6 +27,7 @@
   <meta charset="utf-8">
   <title>My Cart</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="checkout.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <style>
     .header {
@@ -56,11 +57,11 @@
   </nav>
 </header>
 <body>
-    <table>
+    <table id="moveRight">
       <form action="checkoutProcess.php" method="post">
         <tr>
             <td>
-                <h1> Pick a location. </h1>
+                <h1> Pick a location: </h1>
             </td>
         </tr>
         <?php foreach ($locations as $location) :?>
@@ -79,7 +80,7 @@
 
         <tr>
             <td>
-                <h1> Pick a payment method. </h1>
+                <h1> Pick a payment method: </h1>
             </td>
         </tr>
         <tr>
@@ -95,10 +96,18 @@
             </td>
         </tr>
         <tr><td>
-            <input type="submit" name="submitCheckout" value="Proceed To Checkout">
+            <input id="proceedToCheckoutButton" type="submit" name="submitCheckout" value="Proceed To Checkout">
         </tr></td>
       </form>
     </table>
+
+    <footer>
+    	<nav id="socials">
+    	  <a style="color: white"> Contact Us Here: </a>
+    	  <a class="link" href = "" target="_blank"> Email </a>
+    	  <a class="link" href = "" target="_blank"> Phone Number </a>
+    	</nav>
+    </footer>
 
 </body>
 </html>
