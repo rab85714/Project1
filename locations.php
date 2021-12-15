@@ -23,12 +23,12 @@
             <a class="link" href = "locations.php"> Locations </a>
             <a class="link" href = "cart.php"> My Cart </a>
             <?php
-                $email = $_SESSION['email'];
                 $isLoggedIn = "Login";
                 $phpPage = "login.php";
-                if (isset($email)) {
+                if (isset($_SESSION['email'])) {
                     $isLoggedIn = "Logout";
                     $phpPage = "logout.php";
+                    $email = $_SESSION['email'];
                 }
             ?>
             <a class="link" href=<?php echo $phpPage ?>>  <?php echo $isLoggedIn ?> </a>
