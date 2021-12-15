@@ -1,6 +1,6 @@
 .main {
-  background-image: url("backgroundCloth.jpg");
-  border-top: 5px solid white;
+  background-image: url("woodBackground.jpg");
+  border: 5px solid black;
 }
 
 header {
