@@ -37,59 +37,61 @@
   </nav>
 </header>
 <body>
-  <div class="title">
-    <h2> Cart </h2>
-  </div>
-  <div>
-      <form id="continueShoppingButton" action="./menu.php"><input type="submit" value="Continue Shopping"></form>
-</div>
-  <div class="grid-container">
-    <table class="cart-table">
-      <tr>
-         <th> Name </th>
-         <th> Quantity </th>
-         <th> Price </th>
-      </tr>
-    <?php
-    $total = 0;
-    foreach ($cart as $item) :?>
-      <tr class="item-row">
-            <td> <?php echo $item['name']; ?></td>
-            <td>
-                <form class="update-form" action="updateQuantity.php" method="post">
-                    <a><input type="number" name="quantity" value = "<?php echo $item['quantity'] ?>" min = 1 max = 10></a><br>
-                    <input type="hidden" name="itemId" value="<?php echo $item['itemId']?>">
-                    <a><input class="update-button" type="submit" name="update" value="Update Quantity"></a>
-                </form>
-            </td>
-            <?php $itemTotal = $item['price'] * $item['quantity']; ?>
-            <td class="price"> <?php echo $itemTotal; ?> </td>
-            <?php $total = $total + $itemTotal; ?>
-            <td>
-                <form action="removeFromCart.php" method="post">
-                    <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
-                    <a><input type="submit" name="remove" value="X"></a>
-                </form>
-            </td>
-      </tr>
-      <?php endforeach;?>
+    <div class="plainBackground" id="content-wrap">
+        <div class="title">
+            <h2> Cart </h2>
+        </div>
+        <div>
+            <form id="continueShoppingButton" action="./menu.php"><input type="submit" value="Continue Shopping"></form>
+        </div>
+        <div class="grid-container">
+            <table class="cart-table">
+                <tr>
+                    <th> Name </th>
+                    <th> Quantity </th>
+                    <th> Price </th>
+                </tr>
+            <?php
+            $total = 0;
+            foreach ($cart as $item) :?>
+                <tr class="item-row">
+                    <td> <?php echo $item['name']; ?></td>
+                    <td>
+                        <form class="update-form" action="updateQuantity.php" method="post">
+                            <a><input type="number" name="quantity" value = "<?php echo $item['quantity'] ?>" min = 1 max = 10></a><br>
+                            <input type="hidden" name="itemId" value="<?php echo $item['itemId']?>">
+                            <a><input class="update-button" type="submit" name="update" value="Update Quantity"></a>
+                        </form>
+                    </td>
+                    <?php $itemTotal = $item['price'] * $item['quantity']; ?>
+                    <td class="price"> <?php echo $itemTotal; ?> </td>
+                    <?php $total = $total + $itemTotal; ?>
+                    <td>
+                        <form action="removeFromCart.php" method="post">
+                            <a><input type="hidden" name="itemId" value="<?php echo $item['itemId']?>"></a>
+                            <a><input type="submit" name="remove" value="X"></a>
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach;?>
 
-    </table>
-    <br>
-    <form class="place-order" action="checkout.php" method="post">
-        <a><?php echo "Total: $" . $total; ?></a>
-        <a><input type="hidden" name="total" value="<?php echo $total?>"></a>
-        <a><input id="placeOrderButton" type="submit" name="checkout" value="Place Order"></a>
-    </form>
-  </div>
+            </table>
+            <br>
+            <form class="place-order" action="checkout.php" method="post">
+                <a><?php echo "Total: $" . $total; ?></a>
+                <a><input type="hidden" name="total" value="<?php echo $total?>"></a>
+                <a><input id="placeOrderButton" type="submit" name="checkout" value="Place Order"></a>
+            </form>
+        </div>
+    </div>
 
-  <footer>
-  	<nav id="socials">
-  	  <a class="contact" href=#> Contact Us Here: </a>
-  	  <a onclick="displayEmail()" class="link" href = ""  > Email </a>
-  	  <a onclick="displayPhoneNumber()" class="link" href = ""  > Phone Number </a>
-  	</nav>
-  </footer>
+    <footer>
+        <nav id="socials">
+            <a class="contact" href=#> Contact Us Here: </a>
+            <a onclick="displayEmail()" class="link" href = ""  > Email </a>
+            <a onclick="displayPhoneNumber()" class="link" href = ""  > Phone Number </a>
+        </nav>
+    </footer>
 
 </body>
 </html>

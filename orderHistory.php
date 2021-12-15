@@ -26,22 +26,6 @@
   <title>Mario's Bistro</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <style>
-    .header {
-      font-family: 'Caveat';
-      font-size: 24px;
-    }
-
-    .options {
-      font-family: 'Ovo';
-      font-size: 22px;
-    }
-
-    .info {
-      font-family: 'Ovo';
-      font-size: 18px;
-    }
-  </style>
 </head>
 <header>
 <h1>Mario's Bistro</h1>
@@ -54,19 +38,20 @@
   </nav>
 </header>
 <body>
-  <h1 style="text-align:center"> Order History </h1>
-    <table>
-        <?php foreach ($orderHistory as $order) :?>
-            <tr>
-                <td>
-                    <a><?php echo $order['locationName']; ?></a>
-                    <a><?php echo $order['cartTotal']; ?></a>
-                    <a><?php echo $order['dop']; ?></a>
-                </td>
-            </tr>
-        <?php endforeach;?>
-    </table>
-    <br>
+    <div class="plainBackground" id="content-wrap">
+        <h1 style="text-align:center"> Order History </h1>
+        <table>
+            <?php foreach ($orderHistory as $order) :?>
+                <tr>
+                    <td>
+                        <a><?php echo $order['locationName']; ?></a>
+                        <a><?php echo $order['cartTotal']; ?></a>
+                        <a><?php echo $order['dop']; ?></a>
+                    </td>
+                </tr>
+            <?php endforeach;?>
+        </table>
+    </div>
     <footer>
      <nav id="socials">
        <a class="contact" href=#> Contact Us Here: </a>

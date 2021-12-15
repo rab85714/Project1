@@ -3,10 +3,26 @@
   font-weight: bold;
 }
 
+.title {
+    text-align: center;
+}
+
+.locationMain {
+    text-align: center;
+    background-color: white;
+    border: 5px solid black;
+    display: inline-block;
+    padding: 10px;
+}
+
 img {
     float: left;
     width:  300px;
     height: 300px;
     border-style: solid;
     object-fit: cover;
+}
+
+.plainBackground {
+    text-align: center;
 }

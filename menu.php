@@ -8,7 +8,6 @@
  ?>
 
  <!DOCTYPE html>
-
  <html>
     <head>
         <title>Mario's Bistro</title>
@@ -16,10 +15,8 @@
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     </head>
-
     <body>
-
-        <header>
+    <header>
         <h1>Mario's Bistro</h1>
  	    <nav>
             <a class="link" href = "index.php"> Home </a>
@@ -39,7 +36,7 @@
         </nav>
     </header>
 
-    <div class="main">
+    <div class="main" id="content-wrap">
     <div class="title">
         <h2> Menu </h2>
     </div>

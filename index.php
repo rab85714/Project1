@@ -31,26 +31,29 @@
                     <a class="link" href=<?php echo $phpPage ?>>  <?php echo $isLoggedIn ?> </a>
                 </nav>
         </header>
-        <div>
-            <div class="homepage">
-                <h1> A little about us: </h1>
-                <p id="aboutParagraph">
-                  Mario's Bistro was established back in 1968.  We are a small italian pasta
-                joint on side of Via Del Corso Italy and the people loved us!  We have recently
-                poped up a new location in the heart of Athens Georgia! Our mission is to share
-                the taste of authentic italian cuisine with the world!
-                </p>
-            </div>
 
-            <div class="row">
-                <div class="column">
-                    <img src="CaesarSalad.jpeg" alt="salad" style="width:100%">
+        <div class="plainBackground">
+            <div>
+                <div class="homepage">
+                    <h1> A little about us: </h1>
+                    <p id="aboutParagraph">
+                      Mario's Bistro was established back in 1968.  We are a small italian pasta
+                    joint on side of Via Del Corso Italy and the people loved us!  We have recently
+                    poped up a new location in the heart of Athens Georgia! Our mission is to share
+                    the taste of authentic italian cuisine with the world!
+                    </p>
                 </div>
-                <div class="column">
-                    <img src="Pesto.jpeg" alt="pasta" style="width:100%">
-                </div>
-                <div class="column">
-                    <img src="bread.jpeg" alt="bread" style="width:100%">
+
+                <div class="row">
+                    <div class="column">
+                        <img src="CaesarSalad.jpeg" alt="salad" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="Pesto.jpeg" alt="pasta" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="bread.jpeg" alt="bread" style="width:100%">
+                    </div>
                 </div>
             </div>
         </div>
