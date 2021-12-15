@@ -17,7 +17,7 @@
     </head>
     <body>
     <header>
-        <h1>Mario's Bistro</h1>
+        <h1 >Mario's Bistro</h1>
  	    <nav>
             <a class="link" href = "index.php"> Home </a>
             <a class="link" href = "menu.php"> Menu </a>
