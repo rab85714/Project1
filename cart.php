@@ -85,7 +85,7 @@
 
   <footer>
   	<nav id="socials">
-  	  <a style="color: white"> Contact Us Here: </a>
+  	  <a class="contact" href=#> Contact Us Here: </a>
   	  <a onclick="displayEmail()" class="link" href = ""  > Email </a>
   	  <a onclick="displayPhoneNumber()" class="link" href = ""  > Phone Number </a>
   	</nav>

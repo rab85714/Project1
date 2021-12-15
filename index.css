@@ -38,7 +38,8 @@ a:last-child {
 
 footer {
   color: black;
-  background-color: lightgray;
+  background-image: url('flag.jpeg');
+  background-size: cover;
   font: Verdana;
   padding: 3px;
   padding-top: 10px;
@@ -68,6 +69,13 @@ div {
 
 .link:hover {
   color: white;
+}
+
+.contact, .contact:hover {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-decoration: none;
+  pointer-events: none;
 }
 
 .homepage {

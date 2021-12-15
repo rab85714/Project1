@@ -10,39 +10,40 @@
  <!DOCTYPE html>
 
  <html>
-     <head>
+    <head>
         <title>Mario's Bistro</title>
         <link rel="stylesheet" href="menuItems.css">
         <link rel="stylesheet" href="index.css">
- 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-     </head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    </head>
 
-     <body>
+    <body>
 
-       <header>
-         <h1>Mario's Bistro</h1>
- 	       <nav>
-           <a class="link" href = "index.php"> Home </a>
-           <a class="link" href = "menu.php"> Menu </a>
-           <a class="link" href = "locations.php"> Locations </a>
-           <a class="link" href = "cart.php"> My Cart </a>
-           <?php
-           $email = $_SESSION['email'];
-           $isLoggedIn = "Login";
-           $phpPage = "login.php";
-           if (isset($email)) {
-             $isLoggedIn = "Logout";
-             $phpPage = "logout.php";
-           }
+        <header>
+        <h1>Mario's Bistro</h1>
+ 	    <nav>
+            <a class="link" href = "index.php"> Home </a>
+            <a class="link" href = "menu.php"> Menu </a>
+            <a class="link" href = "locations.php"> Locations </a>
+            <a class="link" href = "cart.php"> My Cart </a>
+            <?php
+            $email = $_SESSION['email'];
+            $isLoggedIn = "Login";
+            $phpPage = "login.php";
+            if (isset($email)) {
+                $isLoggedIn = "Logout";
+                $phpPage = "logout.php";
+            }
             ?>
-           <a class="link" href=<?php echo $phpPage ?>>  <?php echo $isLoggedIn ?> </a>
-         </nav>
-       </header>
-       <br>
-       <h2 style="text-align:center"> My Cart </h2>
+            <a class="link" href=<?php echo $phpPage ?>>  <?php echo $isLoggedIn ?> </a>
+        </nav>
+    </header>
 
-       <div class="main">
-         <div class="grid-container">
+    <div class="main">
+    <div class="title">
+        <h2> Menu </h2>
+    </div>
+        <div class="grid-container">
             <?php $count = 0 ?>
             <?php foreach ($items as $item): ?>
                 <div class="item-box" class="container">
@@ -56,18 +57,18 @@
                     </form>
                 </div>
             <?php endforeach; ?>
-         </div>
-       </div>
+        </div>
+    </div>
 
-       <footer>
-       	<nav id="socials">
-       	  <a style="color: white"> Contact Us Here: </a>
-       	  <a onclick="displayEmail()" class="link" href = ""  > Email </a>
-       	  <a onclick="displayPhoneNumber()" class="link" href = ""  > Phone Number </a>
+    <footer>
+        <nav id="socials">
+       	    <a class="contact" href=#> Contact Us Here: </a>
+       	    <a onclick="displayEmail()" class="link" href = ""  > Email </a>
+       	    <a onclick="displayPhoneNumber()" class="link" href = ""  > Phone Number </a>
        	</nav>
-       </footer>
+    </footer>
 
-     </body>
+    </body>
  </html>
 
  <script>

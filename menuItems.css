@@ -25,3 +25,7 @@ p {
     font-size: 25px;
     font-weight: bold;
 }
+
+.title {
+    text-align: center;
+}
