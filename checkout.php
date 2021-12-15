@@ -31,7 +31,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <header>
-<h1>Mario's Bistro</h1>
+<title class="headTitle">Mario's Bistro</title>
   <nav>
     <a class="link" href = "index.php"> Home </a>
     <a class="link" href = "menu.php"> Menu </a>

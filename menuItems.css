@@ -29,3 +29,9 @@ p {
 .title {
     text-align: center;
 }
+
+.add-button {
+    border-radius: 12px;
+    background-color: #259c1f;
+    font-family: Ink Free;
+}

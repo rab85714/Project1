@@ -18,6 +18,10 @@ h1 {
   padding-bottom: 0px;
 }
 
+.headTitle {
+    font-family: Ink Free;
+}
+
 a {
   width: 100%;
   text-decoration: none;
