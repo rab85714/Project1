@@ -74,13 +74,13 @@
                     </td>
                 </tr>
             <?php endforeach;?>
-                <tr class="item-row">
-                    <?php if ($total == 0) { ?>
-                        <td> Your cart is empty silly! </td>
-                    <?php } ?>
+                <?php if ($total < 1.0) { ?>
+                    <tr class="item-row">
+                    <td> Your cart is empty silly! </td>
                     <td> 0 </td>
                     <td> $ 0.00 </td>
-                </tr>
+                    </tr>
+                <?php } ?>
             </table>
             <br>
             <form class="place-order" action="checkout.php" method="post">
